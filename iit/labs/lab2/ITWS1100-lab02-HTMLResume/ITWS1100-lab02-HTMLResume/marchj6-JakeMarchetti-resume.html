@@ -15,9 +15,11 @@
 
       body {
          width: 95%;
+         max-width: 900px;
+         margin: 0 auto;
          font-family: "Georgia", "Times New Roman", serif;
          overflow: auto;
-         background-color: rgb(236, 218, 195);
+         background-color: rgb(209, 192, 170);
       }
 
       h1 {
@@ -29,7 +31,7 @@
       }
 
       h1 a{
-         color: rgb(244, 6, 6);
+         color: rgb(105, 175, 169);
          text-decoration: none;
       }
       #headshot {
@@ -40,13 +42,11 @@
       }
 
       h2 {
-         color: red;
-         float: inline;
-         clear: left;
-         width: 150px;
+         color: rgb(105, 175, 169);
          margin: 20px 0 0 0;
          padding: 0;
          font-size: 1.2em;
+         text-align: center;
       }
 
       #landscaping {
@@ -61,8 +61,8 @@
 
 
       #contactInfo {
-         border-top: 2px solid #dc0202;
-         border-bottom: 2px solid #f90404;
+         border-top: 2px solid rgb(105, 175, 169);
+         border-bottom: 2px solid rgb(105, 175, 169);
          padding: 4px 0 4px 0;
          margin: 0;
          text-align: center;
@@ -91,6 +91,43 @@
          float: right;
 
       }
+
+      .main-list {
+         margin: 0 0 16px 0;
+         padding-left: 18px;
+      }
+
+      .main-list > li {
+         margin: 10px 0;
+      }
+      .main-list,
+      .sub-list {
+         list-style-position: inside;
+         margin-left: 0;
+         padding-left: 0;
+      }
+
+      .gallery {
+         display: flex;
+         gap: 12px;              
+         justify-content: center;
+         flex-wrap: wrap;        
+         margin-top: 10px;
+      }
+      
+      .gallery img {
+      width: 180px;           
+      height: 120px;          
+      object-fit: cover;      
+      border-radius: 8px;
+      border: 2px solid rgb(105, 175, 169);
+      }
+
+      .content{
+         text-align: center;
+         margin: 0 auto;
+         max-width: 800px;
+      }
    </style>
 </head>
 
@@ -104,55 +141,116 @@
       <li>401-626-2556</li>
       <li>marchj6@rpi.edu</li>
    </ul>
+   <div class = "content">
    <h2>PAST WORK</h2>
-   <ul id="jobs">
-      <li> Landscaper, Independent | FEB 2022 - PRESENT</li>
-      <li> Stock Worker, Christies Liquors | AUG 2023 – MAR 2024 </li>
-      <li> Bar back, The Crow's Nest | MAY 2024 - AUG 2024 </li>
-      <li> Cashier, Tomasellis Restaurant and Catering | JAN 2022 - MAY 2023 </li>
-      <li> Curbside Pickup, Applebees | SEPT 2024 - DEC 2024 </li>
-      <li> Electrician's Assistant, Independent | MAY 2025 - PRESENT</li>
+      <ul class = "main-list">
+      <li>
+      <strong>Landscaper, Independent</strong>  
+      <ul class = "sub-list">
+        <li> FEB 2022 - PRESENT </li>
+      </ul> 
+      </li>
+
+      <li>
+      <strong>Stock Worker, Christies Liquors</strong>  
+      <ul class = "sub-list">
+         <li>AUG 2023 – MAR 2024</li>
+      </ul>
+      </li>
+
+      <li>
+      <strong>Bar Back, Crows Nest</strong>  
+      <ul class = "sub-list">
+      <li>MAY 2024 - AUG 2024 </li>
+      </ul>
+      </li>
+
+      <li>
+      <strong>Cashier, Tomasellis Restaurant and Catering</strong>  
+      <ul class = "sub-list">
+        <li>JAN 2022 - MAY 2023</li>
+      </ul>
+      </li>
+
+      <li>
+      <strong>Curbside Pickup, Applebees</strong>  
+      <ul class = "sub-list">
+        <li> SEPT 2024 - DEC 2024</li>
+      </ul>
+      </li>
+
+      <li>
+      <strong>Electrician's Assistant, Independent</strong>  
+      <ul class = "sub-list">
+      <li> MAY 2025 - PRESENT </li>
+      </ul>
+      </li>
+   </li>
    </ul>
 
    <div>
       <h2>EDUCATION</h2>
-      <ul>
-         <li> Cranston Highschool West</li>
-         <li> Rennsselaer Poytechnic Institute </li>
+<ul class="main-list">
+  <li>
+    <strong>Cranston High School West</strong>
+    <ul class="sub-list">
+      <li>Graduation: June 7, 2025</li>
+      <li>GPA: 4.39</li>
+    </ul>
+  </li>
+
+  <li>
+    <strong>Rensselaer Polytechnic Institute</strong>
+    <ul class="sub-list">
+      <li>Information Technology & Web Sciences Major</li>
+      <li>Year of Graduation: 2029</li>
+    </ul>
+  </li>
+</ul>
+
+   <h2>VOLUNTEER EXPERIENCE</h2>
+<ul class="main-list">
+  <li>
+    <strong>Cranston High School West</strong>
+    <ul class="sub-list">
+    <li> Sept 2022 – Sept 2025 | 50 Hours </li>
+    </ul>
+  </li>
+
+  <li>
+    <strong>Immaculate Conception Parish</strong>
+    <ul class="sub-list">
+     <li> Sept 2023 – Mar 2025 | 750 Hours </li>
+     </ul>
+  </li>
+
+  <li>
+    <strong>Boy Scouts of America</strong>
+   <ul class="sub-list">
+
+    <li>Sept 2020 – Jan 2025 | 200 Hours</li>
+      <li>Eagle Scout, Troop 66 Garden City | Jul 30, 2025</li>
+    </ul>
+  </li>
+</ul>
+
+
 
       </ul>
    </div>
 
    <div>
-      <h2>VOLUNTEER EXPERIENCE</h2>
-      <ul>
-         <li> Cranston Highschool West</li>
-         <li> Rennsselaer Poytechnic Institute </li>
+  <h2>VISUALS</h2>
+</div>
+  <div class="gallery">
+    <img src="IMG_9097.jpg" alt="Landscaping photo 1">
+    <img src="IMG_2958.jpg" alt="Retreat Photo 1">
+    <img src="IMG_7929.jpg" alt="Retreat Photo 2">
+    <img src="IMG_5136.jpg" alt="Liquor Store Photo 1">
 
-      </ul>
-   </div>
-   <div>
-      <h2>SKILLS & CERTIFICATIONS</h2>
-      <ul>
-         <li> Comptia IT Fundamentals Pro | Certified by Testout </li>
-         <li> Comptia PC Pro | Certified by Testout</li>
-         <li> Comptia Network Pro | Certified by Testout</li>
-         <li> Comptia Client Pro | Certified by Testout</li>
-         <li> Comptia Security Pro | Certified by Testout</li>
-         <li> Experienced in using Google Suite (Docs, Sheets, Slides) </li>
-         <li> Proficient in Microsoft Office (Word, PowerPoint, Web Page Design)
-</li>
+  </div>
+</div>
 
-
-
-      </ul>
-   </div>
-
-   <div>
-      <h2>VISUALS</h2>
-      <img id="landscaping" src="IMG_9097.jpg" alt="Photo of Landsacping">
-
-   </div>
    <div id="nameWrapper">
       <div id="nm">
          <p></p>
