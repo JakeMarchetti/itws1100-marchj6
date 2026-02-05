@@ -4,11 +4,66 @@
 <head>
    <meta charset="UTF-8">
    <title>Document</title>
+
+   <style type="text/css"> 
+
+   html {
+      width: 100%;
+   }
+
+   body { 
+      width: 100%;
+      margin: 0 auto;
+      font-family: "Georgia", "Times New Roman", serif;
+      overflow: auto;
+      background-color: rgb(209,192,170);
+   }
+
+   .nav {
+      width: 100%;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      background-color: #333;
+      display: flex;
+      overflow: hidden;
+      justify-content: center;
+   }
+
+   .nav a{
+      float: left;
+      color:beige;
+      text-align: center;
+      padding: 20px 70px;
+      text-decoration: none;
+      font-size: 19px;
+   }
+
+   .nav a:hover {
+      background-color: #f5f4f2f0 ;
+      color: black;
+   }
+
+   .nav a.active{
+      background-color: #b78c357b;
+      color: beige;
+   }
+   </style>
 </head>
+
+
 
 <body>
    <!-- Here is where our webpage content goes -->
    <section class="beginning">
+   <nav>
+         <div class="nav">
+         <a class="active" href="#home">Home</a>
+         <a href="#labs">Labs</a>
+         <a href="#about">About Me</a>
+      </div>
+   </nav>
+   
       <p>This is my first paragraph</p>
       <p>This is my <em>second</em> paragraph</p>
       <p>Evidently I really <strong>LOVE</strong> paragraphs</p>
@@ -17,6 +72,8 @@
          <li>And here is a list</li>
       </ul>
    </section>
+
+   
 </body>
 
 </html>
