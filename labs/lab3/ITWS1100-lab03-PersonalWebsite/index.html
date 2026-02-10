@@ -5,84 +5,50 @@
    <meta charset="UTF-8">
    <title>Document</title>
 
-   <style type="text/css"> 
-
-   html {
-      width: 100%;
-   }
-
-   body { 
-      width: 100%;
-      margin: 0 auto;
-      font-family: "Georgia", "Times New Roman", serif;
-      overflow: auto;
-      background-color: rgb(209,192,170);
-   }
-
-   .logo {
-      width: 130px;
-      height: 130px;
-      border-style: solid;
-      border-color: #333;
-      border-width: 2px;
-   }
-   .nav {
-      width: 100%;
-      font-weight: bold;
-      list-style-type: none;
-      border-color: rgb(0, 0, 0);
-      border-style: solid;
-      border-width: 2px;
-      margin: 0;
-      padding: 0;
-      background-color: #333;
-      display: flex;
-      overflow: hidden;
-      justify-content: center;
-   }
-
-   .nav a{
-      float: left;
-      color:beige;
-      text-align: center;
-      padding: 20px 70px;
-      text-decoration: none;
-      font-size: 19px;
-   }
-
-   .nav a:hover {
-      background-color: #f5f4f2f0 ;
-      color: black;
-   }
-
-   .nav a.active{
-      background-color: #b78c357b;
-      color: beige;
-   }
-   </style>
+   <link rel="stylesheet" href="style.css">
 </head>
 
 
 
+
 <body>
-   <!-- Here is where our webpage content goes -->
    <section class="beginning">
    <nav>
-         <div class="nav">
-         <a class="active" href="index.html">Home</a>
-         <a href="labs.html">Labs</a>
-         <a href="about.html">About Me</a>
+  <div class="nav">
+    <a class="active" href="index.html">Home</a>
+
+    <div class="dropdown">
+      <a class="dropbtn" href="labs.html">Labs</a>
+      <div class="dropdown-content">
+        <a href="lab1.html">Lab 1</a>
+        <a href="lab2.html">Lab 2</a>
+        <a href="lab3.html">Lab 3</a>
       </div>
-   </nav>
-      <img class="logo" src="IITWS-site-logo.jpg" alt="logo">
+    </div>
+
+    <a href="about.html">About Me</a>
+  </div>
+</nav>
+
+
+
+   <section class="home">
+      <div class="logo-container">
+         <img class="logo" src="images/IITWS-site-logo.jpg" alt="logo">
+      </div>
+   </section>
    
-      <p>This is my first paragraph</p>
-      <p>This is my <em>second</em> paragraph</p>
-      <p>Evidently I really <strong>LOVE</strong> paragraphs</p>
-      <ul>
-         <li>Oh</li>
-         <li>And here is a list</li>
-      </ul>
+   <div class="information">
+      <h2>Welcome to My IITWS Lab Site</h2>
+      <p>
+         This website serves as a central hub for my IITWS coursework, labs, and projects. 
+         This will serve as documentation of the start of my ITWS career at RPI and beyond. 
+         In the "Labs" page, you'll find documentation showcasing my progress in this field. 
+         In the "About Me" page, you'll find information about my character and aspirations.
+      </p>
+
+   </div>
+      
 
       
    </section>

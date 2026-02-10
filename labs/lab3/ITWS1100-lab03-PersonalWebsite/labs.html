@@ -5,61 +5,7 @@
    <meta charset="UTF-8">
    <title>Document</title>
 
-   <style type="text/css"> 
-
-   html {
-      width: 100%;
-   }
-
-   body { 
-      width: 100%;
-      margin: 0 auto;
-      font-family: "Georgia", "Times New Roman", serif;
-      overflow: auto;
-      background-color: rgb(209,192,170);
-   }
-
-   .logo {
-      width: 130px;
-      height: 130px;
-      border-style: solid;
-      border-color: #333;
-      border-width: 2px;
-   }
-   .nav {
-      width: 100%;
-      font-weight: bold;
-      list-style-type: none;
-      border-color: rgb(0, 0, 0);
-      border-style: solid;
-      border-width: 2px;
-      margin: 0;
-      padding: 0;
-      background-color: #333;
-      display: flex;
-      overflow: hidden;
-      justify-content: center;
-   }
-
-   .nav a{
-      float: left;
-      color:beige;
-      text-align: center;
-      padding: 20px 70px;
-      text-decoration: none;
-      font-size: 19px;
-   }
-
-   .nav a:hover {
-      background-color: #f5f4f2f0 ;
-      color: black;
-   }
-
-   .nav a.active{
-      background-color: #b78c357b;
-      color: beige;
-   }
-   </style>
+   <link rel="stylesheet" href="style.css">
 </head>
 
 
@@ -67,22 +13,51 @@
 <body>
    <!-- Here is where our webpage content goes -->
    <section class="beginning">
-   <nav>
-         <div class="nav">
-         <a href="index.html">Home</a>
-         <a class="active" href="labs.html">Labs</a>
-         <a href="about.html">About Me</a>
-      </div>
-   </nav>
-      <img class="logo" src="IITWS-site-logo.jpg" alt="logo">
    
-      <p>This is my first paragraph</p>
-      <p>This is my <em>second</em> paragraph</p>
-      <p>Evidently I really <strong>LOVE</strong> paragraphs</p>
-      <ul>
-         <li>Oh</li>
-         <li>And here is a list</li>
-      </ul>
+   <nav>
+  <div class="nav">
+    <a href="index.html">Home</a>
+
+    <div class="dropdown">
+      <a class="dropbtn active" href="labs.html">Labs</a>
+      <div class="dropdown-content">
+        <a href="lab1.html">Lab 1</a>
+        <a href="lab2.html">Lab 2</a>
+        <a href="lab3.html">Lab 3</a>
+      </div>
+    </div>
+
+    <a href="about.html">About Me</a>
+  </div>
+</nav>
+
+   <div class="labs">
+      <div class="lab-display">
+      <img class="lab-img" src="images/lab1.png" alt="lab 1 img">
+      <div class="lab-text">
+         <a class="lab-title" href="lab1.html">Lab 1</a>
+         <p class="lab-info">Setup Github and my azure instance. Made first HTML program.</p>
+      </div>
+         
+      </div>
+
+      <div class="lab-display">
+      <img class="lab-img" src="images/lab2.png" alt="lab 2 img">
+      <div class="lab-text">
+         <a class="lab-title" href="lab2.html">Lab 2</a>
+         <p class="lab-info">Created my resume using HTML and CSS principles.</p>
+      </div>
+   </div>
+
+      <div class="lab-display">
+      <img class="lab-img" src="images/lab3.png" alt="lab 3 img">
+      <div class="lab-text">
+         <a class="lab-title" href="lab3.html">Lab 3</a>
+         <p class="lab-info">Created this IITWS lab site. Learned proper programming using AI.</p>
+      </div>
+         
+      </div>
+   </div>
 
       
    </section>
