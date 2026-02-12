@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <title>Document</title>
+
+   <style type="text/css"> 
+
+   html {
+      width: 100%;
+   }
+
+   body { 
+      width: 100%;
+      margin: 0 auto;
+      font-family: "Georgia", "Times New Roman", serif;
+      overflow: auto;
+      background-color: rgb(209,192,170);
+   }
+
+   .logo {
+      width: 130px;
+      height: 130px;
+      border-style: solid;
+      border-color: #333;
+      border-width: 2px;
+   }
+   .nav {
+      width: 100%;
+      font-weight: bold;
+      list-style-type: none;
+      border-color: rgb(0, 0, 0);
+      border-style: solid;
+      border-width: 2px;
+      margin: 0;
+      padding: 0;
+      background-color: #333;
+      display: flex;
+      overflow: hidden;
+      justify-content: center;
+   }
+
+   .nav a{
+      float: left;
+      color:beige;
+      text-align: center;
+      padding: 20px 70px;
+      text-decoration: none;
+      font-size: 19px;
+   }
+
+   .nav a:hover {
+      background-color: #f5f4f2f0 ;
+      color: black;
+   }
+
+   .nav a.active{
+      background-color: #b78c357b;
+      color: beige;
+   }
+   </style>
+</head>
+
+
+
+<body>
+   <!-- Here is where our webpage content goes -->
+   <section class="beginning">
+   <nav>
+         <div class="nav">
+         <a href="index.html">Home</a>
+         <a href="labs.html">Labs</a>
+         <a class="active" href="about.html">About Me</a>
+      </div>
+   </nav>
+      <img class="logo" src="IITWS-site-logo.jpg" alt="logo">
+   
+      <p>This is my first paragraph</p>
+      <p>This is my <em>second</em> paragraph</p>
+      <p>Evidently I really <strong>LOVE</strong> paragraphs</p>
+      <ul>
+         <li>Oh</li>
+         <li>And here is a list</li>
+      </ul>
+
+      
+   </section>
+
+   
+</body>
+
+</html>
