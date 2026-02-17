@@ -180,3 +180,68 @@
   color: #2f2a1f;
   line-height: 1.4;
 }
+
+/* Lab page gallery and image styles */
+.lab-page {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+.lab-page h1 {
+  color: #3f3420;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+  align-items: start;
+}
+
+.img-item {
+  background-color: #e6dcc9;
+  border: 2px solid #6b5a3a;
+  border-radius: 6px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.img-item figure {
+  margin: 0;
+}
+
+.img-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border: 3px solid #333;
+  background-color: #f5f1e6;
+  border-radius: 4px;
+  display: block;
+}
+
+.img-item figcaption {
+  margin-top: 6px;
+  font-size: 14px;
+  color: #2f2a1f;
+}
+
+.img-desc {
+  font-size: 15px;
+  color: #2f2a1f;
+  line-height: 1.5;
+}
+
+.description-box, .information {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 18px 22px;
+  background-color: #e6dcc9;
+  border: 2px solid #6b5a3a;
+  border-radius: 6px;
+}
