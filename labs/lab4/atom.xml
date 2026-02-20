@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/css" href="rss.css"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+<title>Jake Marchetti - IITWS Labs</title>
+<subtitle>Updates and Links to my IITWS Labs</subtitle>
+
+<link href="projectsite/labs.html" />
+<link href="projectsite/labs.html" />
+
+<id>https://marchj6rpi.eastus.cloudapp.azure.com/</id>
+<updated>2026-02-19</updated>
+
+<author>
+    <name>Jake Marchetti</name>
+</author>
+
+<entry>
+    <title>Lab 1: VM and Github Setup</title>
+    <link href="projectsite/lab1.html">
