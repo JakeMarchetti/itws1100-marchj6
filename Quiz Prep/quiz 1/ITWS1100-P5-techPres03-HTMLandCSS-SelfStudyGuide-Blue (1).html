@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>HTML &amp; CSS Self-Study Guide - ITWS1100</title>
+   <!--
+      CSS is embedded in this file (rather than in an external stylesheet) for PORTABILITY.
+
+      When you share a single HTML file, embedded CSS travels with it - no broken links,
+      no missing styles. This is ideal for:
+        - Handouts and guides like this one
+        - Email attachments
+        - Quick prototypes
+
+      For larger projects with multiple pages, external stylesheets are better because:
+        - They can be cached by the browser (faster loading)
+        - Changes apply to all pages at once
+        - Separation of concerns (content vs. presentation)
+
+      In your resume lab, you may use either embedded or external CSS.
+   -->
+   <style>
+      /* ============================================
+         ROOT VARIABLES & RESET
+         ============================================ */
+      :root {
+         --primary: #2f6bff;
+         --primary-dark: #1f4ed6;
+         --secondary: #d7e2f5;
+         --accent: #5fb2ff;
+         --bg-light: #0b1220;
+         --bg-surface: #121d33;
+         --bg-elevated: #182744;
+         --bg-code: #0b1020;
+         --text: #e6f0ff;
+         --text-light: #b7c7e2;
+         --border: rgba(148, 196, 255, 0.18);
+         --success: #38d39f;
+         --info: #5fb2ff;
+         --warning: #f4c96b;
+      }
+
+      * {
+         box-sizing: border-box;
+      }
+
+      /* ============================================
+         BASE STYLES
+         ============================================ */
+      body {
+         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+         line-height: 1.6;
+         color: var(--text);
+         background: radial-gradient(circle at top, #14233d 0%, var(--bg-light) 45%, #070d16 100%);
+         margin: 0;
+         padding: 0;
+      }
+
+      /* ============================================
+         LAYOUT CONTAINER
+         ============================================ */
+      .container {
+         max-width: 900px;
+         margin: 0 auto;
+         padding: 20px;
+      }
+
+      /* ============================================
+         HEADER
+         ============================================ */
+      header {
+         background: linear-gradient(135deg, #1b2b4c 0%, #243b66 50%, #2f6bff 100%);
+         color: white;
+         padding: 40px 20px;
+         text-align: center;
+         margin-bottom: 30px;
+         box-shadow: 0 18px 40px rgba(6, 12, 24, 0.6);
+      }
+
+      header h1 {
+         margin: 0 0 10px 0;
+         font-size: 2em;
+      }
+
+      header .subtitle {
+         font-size: 1.2em;
+         opacity: 0.9;
+      }
+
+      .snow-notice {
+         background-color: rgba(95, 178, 255, 0.2);
+         color: var(--text);
+         padding: 15px 20px;
+         border-radius: 8px;
+         margin: -20px auto 30px auto;
+         max-width: 860px;
+         font-weight: 600;
+         text-align: center;
+         border: 1px solid rgba(95, 178, 255, 0.35);
+         box-shadow: 0 10px 24px rgba(6, 12, 24, 0.4);
+      }
+
+      /* ============================================
+         SECTIONS
+         ============================================ */
+      section {
+         background: var(--bg-surface);
+         border-radius: 12px;
+         padding: 25px 30px;
+         margin-bottom: 25px;
+         box-shadow: 0 12px 30px rgba(6, 12, 24, 0.45);
+         border: 1px solid var(--border);
+      }
+
+      section h2 {
+         color: var(--accent);
+         border-bottom: 2px solid rgba(95, 178, 255, 0.4);
+         padding-bottom: 10px;
+         margin-top: 0;
+         font-size: 1.5em;
+      }
+
+      section h3 {
+         color: var(--text);
+         margin-top: 25px;
+         margin-bottom: 10px;
+         font-size: 1.2em;
+      }
+
+      section h4 {
+         color: var(--text-light);
+         margin-top: 20px;
+         margin-bottom: 8px;
+         font-size: 1em;
+         text-transform: uppercase;
+         letter-spacing: 0.5px;
+      }
+
+      /* ============================================
+         CODE BLOCKS
+         ============================================ */
+      pre {
+         background-color: var(--bg-code);
+         color: #e6f0ff;
+         padding: 15px 20px;
+         border-radius: 8px;
+         overflow-x: auto;
+         font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+         font-size: 0.9em;
+         line-height: 1.5;
+         border: 1px solid rgba(95, 178, 255, 0.2);
+      }
+
+      code {
+         background-color: rgba(95, 178, 255, 0.15);
+         color: #d6e6ff;
+         padding: 2px 6px;
+         border-radius: 4px;
+         font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+         font-size: 0.9em;
+      }
+
+      pre code {
+         background: none;
+         color: inherit;
+         padding: 0;
+      }
+
+      /* Syntax highlighting colors */
+      .tag {
+         color: #ff8fb3;
+      }
+
+      .attr {
+         color: #7ee787;
+      }
+
+      .value {
+         color: #ffd680;
+      }
+
+      .comment {
+         color: #7f8aa6;
+      }
+
+      .selector {
+         color: #7cd6ff;
+      }
+
+      .property {
+         color: #9ad4ff;
+      }
+
+      /* ============================================
+         TABLES
+         ============================================ */
+      table {
+         width: 100%;
+         border-collapse: collapse;
+         margin: 15px 0;
+      }
+
+      th,
+      td {
+         padding: 12px 15px;
+         text-align: left;
+         border: 1px solid var(--border);
+      }
+
+      th {
+         background-color: var(--bg-elevated);
+         color: var(--text);
+         font-weight: 600;
+      }
+
+      tr:nth-child(even) {
+         background-color: rgba(24, 39, 68, 0.7);
+      }
+
+      /* ============================================
+         LISTS
+         ============================================ */
+      ul,
+      ol {
+         padding-left: 25px;
+      }
+
+      li {
+         margin-bottom: 8px;
+      }
+
+      /* ============================================
+         LINKS
+         ============================================ */
+      a {
+         color: var(--accent);
+         text-decoration: none;
+      }
+
+      a:hover {
+         text-decoration: underline;
+         color: #9ad4ff;
+      }
+
+      /* ============================================
+         RESOURCE CARDS
+         ============================================ */
+      .resource-grid {
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+         gap: 15px;
+         margin: 20px 0;
+      }
+
+      .resource-card {
+         border: 1px solid var(--border);
+         border-radius: 10px;
+         padding: 15px 20px;
+         background: var(--bg-elevated);
+         transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+      }
+
+      .resource-card:hover {
+         transform: translateY(-3px);
+         box-shadow: 0 10px 24px rgba(6, 12, 24, 0.5);
+         border-color: rgba(95, 178, 255, 0.45);
+      }
+
+      .resource-card h4 {
+         margin: 0 0 8px 0;
+         color: var(--accent);
+         text-transform: none;
+         letter-spacing: normal;
+      }
+
+      .resource-card p {
+         margin: 0 0 10px 0;
+         font-size: 0.9em;
+         color: var(--text-light);
+      }
+
+      .resource-card .time {
+         font-size: 0.85em;
+         color: var(--accent);
+         font-weight: 600;
+      }
+
+      /* ============================================
+         CALLOUT BOXES
+         ============================================ */
+      .callout {
+         padding: 15px 20px;
+         border-radius: 8px;
+         margin: 20px 0;
+         border-left: 4px solid;
+         background: rgba(18, 29, 51, 0.85);
+         border: 1px solid rgba(95, 178, 255, 0.18);
+      }
+
+      .callout-info {
+         background-color: rgba(95, 178, 255, 0.12);
+         border-color: var(--info);
+      }
+
+      .callout-warning {
+         background-color: rgba(244, 201, 107, 0.15);
+         border-color: var(--warning);
+      }
+
+      .callout-success {
+         background-color: rgba(56, 211, 159, 0.15);
+         border-color: var(--success);
+      }
+
+      .callout-title {
+         font-weight: 700;
+         margin-bottom: 5px;
+      }
+
+      /* ============================================
+         PRACTICE EXERCISE STYLES
+         ============================================ */
+      .exercise-step {
+         display: flex;
+         gap: 15px;
+         margin-bottom: 20px;
+         padding: 15px;
+         background: var(--bg-elevated);
+         border-radius: 10px;
+         border-left: 4px solid var(--accent);
+         box-shadow: 0 8px 20px rgba(6, 12, 24, 0.35);
+      }
+
+      .step-number {
+         background: var(--accent);
+         color: #041224;
+         width: 32px;
+         height: 32px;
+         border-radius: 50%;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         font-weight: 700;
+         flex-shrink: 0;
+      }
+
+      .step-content {
+         flex: 1;
+      }
+
+      .step-content h4 {
+         margin: 0 0 8px 0;
+         color: var(--text);
+         text-transform: none;
+         letter-spacing: normal;
+      }
+
+      .step-content p {
+         margin: 0;
+      }
+
+      /* ============================================
+         CHECKLIST
+         ============================================ */
+      .checklist {
+         list-style: none;
+         padding-left: 0;
+      }
+
+      .checklist li {
+         padding: 10px 15px;
+         background: var(--bg-elevated);
+         margin-bottom: 8px;
+         border-radius: 8px;
+         display: flex;
+         align-items: flex-start;
+         gap: 10px;
+         border: 1px solid rgba(95, 178, 255, 0.12);
+      }
+
+      .checklist li::before {
+         content: "\2610";
+         font-size: 1.2em;
+         color: var(--accent);
+      }
+
+      /* ============================================
+         RUBRIC TABLE
+         ============================================ */
+      .rubric-table th:first-child {
+         width: 30%;
+      }
+
+      .rubric-table th:nth-child(2) {
+         width: 15%;
+         text-align: center;
+      }
+
+      .rubric-table td:nth-child(2) {
+         text-align: center;
+         font-weight: 700;
+         color: var(--accent);
+      }
+
+      /* ============================================
+         FOOTER
+         ============================================ */
+      footer {
+         text-align: center;
+         padding: 20px;
+         color: var(--text-light);
+         font-size: 0.9em;
+      }
+
+      /* ============================================
+         RESPONSIVE
+         ============================================ */
+      @media (max-width: 600px) {
+         header h1 {
+            font-size: 1.5em;
+         }
+
+         section {
+            padding: 20px;
+         }
+
+         pre {
+            font-size: 0.8em;
+         }
+
+         .exercise-step {
+            flex-direction: column;
+         }
+      }
+   </style>
+</head>
+
+<body>
+   <header>
+      <h1>HTML &amp; CSS Self-Study Guide</h1>
+      <div class="subtitle">ITWS1100 - Intro to Information Technology &amp; Web Science</div>
+   </header>
+
+   <div class="snow-notice">
+      Class cancelled tomorrow (snow day). Use this guide to prepare for Thursday's combined lecture/lab.
+   </div>
+
+   <div class="container">
+
+      <!-- OVERVIEW SECTION -->
+      <section>
+         <h2>Topic Overview</h2>
+         <p>This unit covers <strong>HTML (HyperText Markup Language)</strong> and <strong>CSS (Cascading Style
+               Sheets)</strong> &mdash; the foundational technologies for creating web pages.</p>
+
+         <div class="callout callout-info">
+            <div class="callout-title">The Big Picture</div>
+            <p><strong>HTML</strong> provides the <em>structure</em> and <em>content</em> of a web page using
+               tags.<br>
+               <strong>CSS</strong> provides the <em>presentation</em> and <em>styling</em> of that content.
+            </p>
+         </div>
+
+         <h3>Why Learn This?</h3>
+         <ul>
+            <li>HTML is a <strong>semantic markup</strong> &mdash; understanding it helps you make good decisions about
+               how machines (like search engines) interpret your documents</li>
+            <li>If you do any web coding or design real-world web applications, you need to be fluent in HTML &amp; CSS
+            </li>
+            <li>These are fundamental skills for <em>any</em> career in IT, web development, or digital media</li>
+         </ul>
+      </section>
+
+      <!-- KEY CONCEPTS -->
+      <section>
+         <h2>Key Concepts to Understand</h2>
+
+         <h3>1. HTML Document Structure</h3>
+         <p>Every HTML5 document follows this pattern:</p>
+         <pre><code><span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html&gt;</span>
+  <span class="tag">&lt;head&gt;</span>
+    <span class="tag">&lt;title&gt;</span>Page Title<span class="tag">&lt;/title&gt;</span>
+  <span class="tag">&lt;/head&gt;</span>
+  <span class="tag">&lt;body&gt;</span>
+    Content goes here
+  <span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span></code></pre>
+         <ul>
+            <li><code>&lt;!DOCTYPE html&gt;</code> &mdash; Tells the browser this is HTML5</li>
+            <li><code>&lt;head&gt;</code> &mdash; Contains metadata, title, CSS links, scripts (not visible on page)
+            </li>
+            <li><code>&lt;body&gt;</code> &mdash; Contains all visible content</li>
+         </ul>
+
+         <h3>2. Common HTML Elements</h3>
+         <table>
+            <thead>
+               <tr>
+                  <th>Element</th>
+                  <th>Purpose</th>
+                  <th>Display Type</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td><code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code></td>
+                  <td>Headings (h1 = most important)</td>
+                  <td>Block</td>
+               </tr>
+               <tr>
+                  <td><code>&lt;p&gt;</code></td>
+                  <td>Paragraphs</td>
+                  <td>Block</td>
+               </tr>
+               <tr>
+                  <td><code>&lt;div&gt;</code></td>
+                  <td>Generic container for grouping</td>
+                  <td>Block</td>
+               </tr>
+               <tr>
+                  <td><code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>, <code>&lt;li&gt;</code></td>
+                  <td>Lists (unordered, ordered, list item)</td>
+                  <td>Block</td>
+               </tr>
+               <tr>
+                  <td><code>&lt;em&gt;</code>, <code>&lt;strong&gt;</code></td>
+                  <td>Emphasis (italic, bold)</td>
+                  <td>Inline</td>
+               </tr>
+               <tr>
+                  <td><code>&lt;a href="..."&gt;</code></td>
+                  <td>Links</td>
+                  <td>Inline</td>
+               </tr>
+               <tr>
+                  <td><code>&lt;img src="..." alt="..."&gt;</code></td>
+                  <td>Images</td>
+                  <td>Inline</td>
+               </tr>
+            </tbody>
+         </table>
+
+         <h3>3. Block vs. Inline Elements</h3>
+         <ul>
+            <li><strong>Block elements</strong>: Take full width available, create line breaks before and after
+               (paragraphs, headings, divs)</li>
+            <li><strong>Inline elements</strong>: Flow with surrounding content, no line breaks (emphasized text, links,
+               images)</li>
+         </ul>
+
+         <h3>4. CSS Basics</h3>
+         <p>CSS rules follow this structure:</p>
+         <pre><code><span class="selector">selector</span> {
+  <span class="property">property</span>: <span class="value">value</span>;
+  <span class="property">property</span>: <span class="value">value</span>;
+}</code></pre>
+
+         <h4>Three Ways to Add CSS</h4>
+         <table>
+            <thead>
+               <tr>
+                  <th>Method</th>
+                  <th>Example</th>
+                  <th>When to Use</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td><strong>External</strong> (best)</td>
+                  <td><code>&lt;link href="style.css" rel="stylesheet"&gt;</code></td>
+                  <td>Multi-page sites, production</td>
+               </tr>
+               <tr>
+                  <td><strong>Embedded</strong></td>
+                  <td><code>&lt;style&gt;...&lt;/style&gt;</code> in head</td>
+                  <td>Single-page, portability</td>
+               </tr>
+               <tr>
+                  <td><strong>Inline</strong> (avoid)</td>
+                  <td><code>&lt;p style="color: red;"&gt;</code></td>
+                  <td>Quick testing only</td>
+               </tr>
+            </tbody>
+         </table>
+
+         <h3>5. CSS Selectors</h3>
+         <table>
+            <thead>
+               <tr>
+                  <th>Selector Type</th>
+                  <th>Example</th>
+                  <th>Selects</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td>Element</td>
+                  <td><code>p { }</code></td>
+                  <td>All <code>&lt;p&gt;</code> elements</td>
+               </tr>
+               <tr>
+                  <td>Class</td>
+                  <td><code>.highlight { }</code></td>
+                  <td>Elements with <code>class="highlight"</code></td>
+               </tr>
+               <tr>
+                  <td>ID</td>
+                  <td><code>#footer { }</code></td>
+                  <td>Element with <code>id="footer"</code></td>
+               </tr>
+               <tr>
+                  <td>Combined</td>
+                  <td><code>p.intro { }</code></td>
+                  <td><code>&lt;p&gt;</code> elements with <code>class="intro"</code></td>
+               </tr>
+               <tr>
+                  <td>Descendant</td>
+                  <td><code>div p { }</code></td>
+                  <td><code>&lt;p&gt;</code> elements inside a <code>&lt;div&gt;</code></td>
+               </tr>
+            </tbody>
+         </table>
+
+         <div class="callout callout-warning">
+            <div class="callout-title">Important: IDs vs. Classes</div>
+            <p><strong>IDs</strong> must be unique &mdash; only one element per page can have a specific ID.<br>
+               <strong>Classes</strong> can be reused &mdash; multiple elements can share the same class.
+            </p>
+         </div>
+
+         <h3>6. CSS Specificity (The Cascade)</h3>
+         <p>When rules conflict, more specific wins:</p>
+         <ol>
+            <li><strong>ID selectors</strong> (#footer) beat class selectors</li>
+            <li><strong>Class selectors</strong> (.highlight) beat element selectors</li>
+            <li><strong>Element selectors</strong> (p) are least specific</li>
+            <li>Later rules override earlier rules (when specificity is equal)</li>
+            <li>Inline styles override embedded/external</li>
+         </ol>
+
+         <h3>7. The CSS Box Model</h3>
+         <p>Every element is a box with four parts (from inside to outside):</p>
+         <ol>
+            <li><strong>Content</strong> &mdash; The actual text/images</li>
+            <li><strong>Padding</strong> &mdash; Space inside the border (around content)</li>
+            <li><strong>Border</strong> &mdash; The edge around the padding</li>
+            <li><strong>Margin</strong> &mdash; Space outside the border (between elements)</li>
+         </ol>
+         <pre><code><span class="selector">.box</span> {
+  <span class="property">padding</span>: <span class="value">20px</span>;          <span class="comment">/* all sides */</span>
+  <span class="property">margin</span>: <span class="value">10px 20px</span>;       <span class="comment">/* top/bottom, left/right */</span>
+  <span class="property">border</span>: <span class="value">1px solid black</span>;
+}</code></pre>
+
+         <h3>8. CSS Sizes &amp; Colors</h3>
+         <h4>Common Size Units</h4>
+         <ul>
+            <li><code>em</code> &mdash; Relative to font size (scalable, great for responsive design)</li>
+            <li><code>px</code> &mdash; Pixels (precise, good for fixed layouts)</li>
+            <li><code>%</code> &mdash; Percentage of parent element</li>
+         </ul>
+
+         <h4>Colors (Hexadecimal)</h4>
+         <p>Colors use hex values: <code>#RRGGBB</code> where each pair is 00-FF</p>
+         <ul>
+            <li><code>#FF0000</code> = Red (shorthand: <code>#F00</code>)</li>
+            <li><code>#00FF00</code> = Green (shorthand: <code>#0F0</code>)</li>
+            <li><code>#0000FF</code> = Blue (shorthand: <code>#00F</code>)</li>
+            <li><code>#000000</code> = Black, <code>#FFFFFF</code> = White</li>
+         </ul>
+
+         <h3>9. Flexbox (Modern Layout)</h3>
+         <p>Flexbox makes layout much easier than floats:</p>
+         <pre><code><span class="selector">.container</span> {
+  <span class="property">display</span>: <span class="value">flex</span>;
+  <span class="property">justify-content</span>: <span class="value">space-between</span>;  <span class="comment">/* horizontal alignment */</span>
+  <span class="property">align-items</span>: <span class="value">center</span>;           <span class="comment">/* vertical alignment */</span>
+}
+
+<span class="selector">.item</span> {
+  <span class="property">flex</span>: <span class="value">1</span>;  <span class="comment">/* items grow to fill space equally */</span>
+}</code></pre>
+
+         <div class="callout callout-success">
+            <div class="callout-title">Pro Tip</div>
+            <p>For the resume lab, Flexbox is excellent for laying out sections with dates aligned to the right.
+               See the sample templates provided!</p>
+         </div>
+      </section>
+
+      <!-- REQUIRED RESOURCES -->
+      <section>
+         <h2>Required Self-Study Resources</h2>
+         <p>Complete these tutorials before Thursday's class:</p>
+
+         <div class="resource-grid">
+            <a href="https://www.w3schools.com/html/default.asp" target="_blank" rel="noopener" class="resource-card">
+               <h4>W3Schools HTML Tutorial</h4>
+               <p>Basic Tags, Attributes, Headings, Paragraphs, Links, Lists</p>
+               <span class="time">30-45 minutes</span>
+            </a>
+
+            <a href="https://www.w3schools.com/css/default.asp" target="_blank" rel="noopener" class="resource-card">
+               <h4>W3Schools CSS Tutorial</h4>
+               <p>Syntax, Selectors, Box Model, basic Flexbox</p>
+               <span class="time">30-45 minutes</span>
+            </a>
+
+            <a href="https://web.dev/learn/css/selectors" target="_blank" rel="noopener" class="resource-card">
+               <h4>web.dev: CSS Selectors</h4>
+               <p>Excellent deep-dive into CSS selectors with interactive examples</p>
+               <span class="time">20-30 minutes</span>
+            </a>
+
+            <a href="https://www.w3schools.com/css/css3_flexbox.asp" target="_blank" rel="noopener"
+               class="resource-card">
+               <h4>W3Schools Flexbox</h4>
+               <p>Modern layout technique you'll use in the resume lab</p>
+               <span class="time">15-20 minutes</span>
+            </a>
+         </div>
+
+         <h3>Reference Materials (Skim/Bookmark)</h3>
+         <div class="resource-grid">
+            <a href="https://www.w3schools.com/tags/ref_byfunc.asp" target="_blank" rel="noopener" class="resource-card">
+               <h4>HTML Tag Reference</h4>
+               <p>Complete list of HTML tags organized by function. Ignore deprecated tags.</p>
+               <span class="time">Reference</span>
+            </a>
+
+            <a href="https://www.w3schools.com/cssref/css_selectors.php" target="_blank" rel="noopener"
+               class="resource-card">
+               <h4>CSS Selectors Reference</h4>
+               <p>Quick reference for all CSS selector types</p>
+               <span class="time">Reference</span>
+            </a>
+         </div>
+      </section>
+
+      <!-- RECOMMENDED RESOURCES -->
+      <section>
+         <h2>Recommended Additional Resources</h2>
+
+         <div class="resource-grid">
+            <a href="https://web.dev/learn/css" target="_blank" rel="noopener" class="resource-card">
+               <h4>web.dev Learn CSS</h4>
+               <p>Comprehensive, modern CSS course from Google. Excellent for deeper understanding.</p>
+               <span class="time">Full Course</span>
+            </a>
+
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener"
+               class="resource-card">
+               <h4>MDN Web Docs</h4>
+               <p>The definitive reference for web technologies. More detailed than W3Schools.</p>
+               <span class="time">Reference</span>
+            </a>
+
+            <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank" rel="noopener"
+               class="resource-card">
+               <h4>CSS-Tricks Flexbox Guide</h4>
+               <p>Visual guide to every Flexbox property. Great for reference.</p>
+               <span class="time">Reference</span>
+            </a>
+
+            <a href="https://css-tricks.com/how-css-selectors-work/" target="_blank" rel="noopener"
+               class="resource-card">
+               <h4>CSS-Tricks Selectors</h4>
+               <p>Another excellent explanation of CSS selectors with examples</p>
+               <span class="time">15-20 minutes</span>
+            </a>
+         </div>
+
+         <div class="callout callout-info">
+            <div class="callout-title">Chrome DevTools</div>
+            <p>Learn to use your browser's Developer Tools (F12) to inspect HTML &amp; CSS. Search YouTube for
+               "Chrome DevTools HTML CSS tutorial" &mdash; The Net Ninja has good introductory videos.</p>
+         </div>
+      </section>
+
+      <!-- LAB PREVIEW -->
+      <section>
+         <h2>Lab Preview: HTML Resume</h2>
+         <p>On Thursday, you will build an HTML resume. Here's what to expect:</p>
+
+         <h3>What You'll Create</h3>
+         <ul>
+            <li>A single HTML file named <code>yourRCSID-FullName-resume.html</code></li>
+            <li>Sections: Contact Info, Objective/Profile, Education, Skills, Experience, Activities</li>
+            <li>Styled with CSS (embedded or external)</li>
+         </ul>
+
+         <h3>Technical Requirements</h3>
+         <ul>
+            <li>Valid HTML5 &mdash; test at <a href="https://validator.w3.org/" target="_blank"
+                  rel="noopener">validator.w3.org</a></li>
+            <li>Valid CSS &mdash; test at <a href="https://jigsaw.w3.org/css-validator/" target="_blank"
+                  rel="noopener">jigsaw.w3.org/css-validator</a></li>
+            <li><strong>NO tables for layout</strong> &mdash; use semantic HTML + CSS (Flexbox or Grid encouraged)</li>
+            <li>Proper indentation (2-3 spaces per level)</li>
+         </ul>
+
+         <h3>Grading Rubric (100 points)</h3>
+         <table class="rubric-table">
+            <thead>
+               <tr>
+                  <th>Criteria</th>
+                  <th>Points</th>
+                  <th>Description</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td><strong>Validity &amp; Code Style</strong></td>
+                  <td>30</td>
+                  <td>Does the page validate? Is indentation consistent and readable?</td>
+               </tr>
+               <tr>
+                  <td><strong>Completeness</strong></td>
+                  <td>50</td>
+                  <td>Is the resume complete? Are all major sections represented with real content?</td>
+               </tr>
+               <tr>
+                  <td><strong>Quality &amp; Creativity</strong></td>
+                  <td>20</td>
+                  <td>How well does it match professional standards? Is the design thoughtful and creative?</td>
+               </tr>
+            </tbody>
+         </table>
+
+         <div class="callout callout-success">
+            <div class="callout-title">Career Center Review</div>
+            <p>After submitting your lab, you'll take your resume to the Career Center for review &mdash; so make it
+               good! This is a real document you can use for internships and jobs.</p>
+         </div>
+      </section>
+
+      <!-- PRACTICE EXERCISE -->
+      <section>
+         <h2>Practice Exercise: Warm-Up Before Thursday</h2>
+         <p>This exercise reinforces your DevOps workflow from Lab 1 (branch, code, commit, push, deploy) while
+            giving you hands-on practice with HTML &amp; CSS before the resume lab.</p>
+
+         <div class="callout callout-warning">
+            <div class="callout-title">Goal</div>
+            <p>Create a simple "About Me" page to practice HTML structure, CSS styling, and your Git workflow.
+               This is <strong>not graded</strong> &mdash; it's practice to get comfortable before Thursday.</p>
+         </div>
+
+         <div class="exercise-step">
+            <div class="step-number">1</div>
+            <div class="step-content">
+               <h4>Create a New Branch</h4>
+               <p>Open <strong>GitHub Desktop</strong> and make sure you're in your <code>iit</code> repository.</p>
+               <p>Click <strong>Current Branch</strong> &rarr; <strong>New Branch</strong> &rarr; name it
+                  <code>practice-aboutme</code>
+               </p>
+               <p>This keeps your practice separate from your main work (just like we'll do with <code>lab02</code> on
+                  Thursday).</p>
+            </div>
+         </div>
+
+         <div class="exercise-step">
+            <div class="step-number">2</div>
+            <div class="step-content">
+               <h4>Create Your Practice File</h4>
+               <p>In VS Code, create a new folder: <code>iit/practice/</code></p>
+               <p>Inside that folder, create a file: <code>aboutme.html</code></p>
+            </div>
+         </div>
+
+         <div class="exercise-step">
+            <div class="step-number">3</div>
+            <div class="step-content">
+               <h4>Write Basic HTML</h4>
+               <p>Type out this structure (don't copy-paste &mdash; typing helps you learn!):</p>
+               <pre><code><span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html</span> <span class="attr">lang</span>=<span class="value">"en"</span><span class="tag">&gt;</span>
+<span class="tag">&lt;head&gt;</span>
+   <span class="tag">&lt;meta</span> <span class="attr">charset</span>=<span class="value">"UTF-8"</span><span class="tag">&gt;</span>
+   <span class="tag">&lt;title&gt;</span>About Me - Your Name<span class="tag">&lt;/title&gt;</span>
+   <span class="tag">&lt;style&gt;</span>
+      <span class="comment">/* Your CSS will go here */</span>
+   <span class="tag">&lt;/style&gt;</span>
+<span class="tag">&lt;/head&gt;</span>
+<span class="tag">&lt;body&gt;</span>
+   <span class="tag">&lt;h1&gt;</span>Your Name<span class="tag">&lt;/h1&gt;</span>
+   <span class="tag">&lt;p&gt;</span>A short introduction about yourself.<span class="tag">&lt;/p&gt;</span>
+
+   <span class="tag">&lt;h2&gt;</span>My Interests<span class="tag">&lt;/h2&gt;</span>
+   <span class="tag">&lt;ul&gt;</span>
+      <span class="tag">&lt;li&gt;</span>Interest 1<span class="tag">&lt;/li&gt;</span>
+      <span class="tag">&lt;li&gt;</span>Interest 2<span class="tag">&lt;/li&gt;</span>
+      <span class="tag">&lt;li&gt;</span>Interest 3<span class="tag">&lt;/li&gt;</span>
+   <span class="tag">&lt;/ul&gt;</span>
+
+   <span class="tag">&lt;h2&gt;</span>Contact<span class="tag">&lt;/h2&gt;</span>
+   <span class="tag">&lt;p&gt;</span>Email: <span class="tag">&lt;a</span> <span class="attr">href</span>=<span class="value">"mailto:yourRCS@rpi.edu"</span><span class="tag">&gt;</span>yourRCS@rpi.edu<span class="tag">&lt;/a&gt;&lt;/p&gt;</span>
+<span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span></code></pre>
+            </div>
+         </div>
+
+         <div class="exercise-step">
+            <div class="step-number">4</div>
+            <div class="step-content">
+               <h4>Add Some CSS</h4>
+               <p>Inside the <code>&lt;style&gt;</code> tag, add these rules:</p>
+               <pre><code><span class="selector">body</span> {
+   <span class="property">font-family</span>: <span class="value">Arial, sans-serif</span>;
+   <span class="property">max-width</span>: <span class="value">600px</span>;
+   <span class="property">margin</span>: <span class="value">40px auto</span>;
+   <span class="property">padding</span>: <span class="value">20px</span>;
+   <span class="property">background-color</span>: <span class="value">#f5f5f5</span>;
+}
+
+<span class="selector">h1</span> {
+   <span class="property">color</span>: <span class="value">#c41230</span>;  <span class="comment">/* RPI Red! */</span>
+}
+
+<span class="selector">h2</span> {
+   <span class="property">border-bottom</span>: <span class="value">2px solid #333</span>;
+   <span class="property">padding-bottom</span>: <span class="value">5px</span>;
+}
+
+<span class="selector">a</span> {
+   <span class="property">color</span>: <span class="value">#c41230</span>;
+}</code></pre>
+            </div>
+         </div>
+
+         <div class="exercise-step">
+            <div class="step-number">5</div>
+            <div class="step-content">
+               <h4>Test Locally</h4>
+               <p>In VS Code, right-click your <code>aboutme.html</code> file and select <strong>Open with Live
+                     Server</strong> (or use the Live Preview extension).</p>
+               <p>Your browser should open and show your styled page. Make changes and watch them update live!</p>
+            </div>
+         </div>
+
+         <div class="exercise-step">
+            <div class="step-number">6</div>
+            <div class="step-content">
+               <h4>Experiment!</h4>
+               <p>Try these modifications to build your CSS intuition:</p>
+               <ul>
+                  <li>Change the background color to something else</li>
+                  <li>Add <code>padding</code> and <code>margin</code> to different elements</li>
+                  <li>Try <code>text-align: center;</code> on the h1</li>
+                  <li>Add a class to style one list item differently</li>
+               </ul>
+            </div>
+         </div>
+
+         <div class="exercise-step">
+            <div class="step-number">7</div>
+            <div class="step-content">
+               <h4>Commit &amp; Push</h4>
+               <p>In <strong>GitHub Desktop</strong>:</p>
+               <ol>
+                  <li>You should see your new files in the "Changes" panel</li>
+                  <li>Write a commit message: <code>Add practice aboutme page</code></li>
+                  <li>Click <strong>Commit to practice-aboutme</strong></li>
+                  <li>Click <strong>Publish branch</strong> (or Push origin) to send it to GitHub</li>
+               </ol>
+            </div>
+         </div>
+
+         <div class="exercise-step">
+            <div class="step-number">8</div>
+            <div class="step-content">
+               <h4>Deploy to Your Server (Optional)</h4>
+               <p>If you want full practice:</p>
+               <ol>
+                  <li>Start your Azure instance</li>
+                  <li>SSH into your web server</li>
+                  <li>Navigate to your <code>iit</code> folder</li>
+                  <li><code>git fetch origin</code></li>
+                  <li><code>git checkout practice-aboutme</code></li>
+                  <li><code>git pull origin practice-aboutme</code></li>
+                  <li>Test at <code>FQDN/iit/practice/aboutme.html</code></li>
+               </ol>
+            </div>
+         </div>
+
+         <div class="callout callout-success">
+            <div class="callout-title">You Did It!</div>
+            <p>You just practiced the entire DevOps workflow: <strong>branch &rarr; code &rarr; test &rarr; commit
+                  &rarr; push &rarr; deploy</strong>. This is exactly what you'll do for Lab 2 on Thursday!</p>
+         </div>
+      </section>
+
+      <!-- TOOLS NEEDED -->
+      <section>
+         <h2>Tools You Need Ready</h2>
+         <ul class="checklist">
+            <li><strong>VS Code</strong> with Live Preview extension installed (<code>ms-vscode.live-server</code>)</li>
+            <li><strong>Chrome or Edge</strong> browser with Developer Tools (press F12)</li>
+            <li><strong>GitHub Desktop</strong> connected to your <code>iit</code> repository</li>
+            <li>Your repository <strong>synced</strong> between GitHub.com and your local machine</li>
+         </ul>
+      </section>
+
+      <!-- COME PREPARED -->
+      <section>
+         <h2>Come to Thursday's Lab Ready With:</h2>
+         <ol>
+            <li><strong>Questions</strong> about HTML/CSS concepts from your self-study</li>
+            <li>A rough idea of your <strong>resume content</strong> (education, skills, experience, activities)</li>
+            <li>Your repo ready to go: <strong>Create a new branch called <code>lab02</code></strong> and make sure
+               it's synced between GitHub and your local machine. (Your Azure instances can wait until deployment
+               time.)</li>
+         </ol>
+
+         <div class="callout callout-info">
+            <div class="callout-title">Thursday's Plan</div>
+            <p>We'll start with a brief Q&amp;A to address any confusion from self-study, then dive straight into
+               building your resumes. Come prepared so we can maximize hands-on coding time!</p>
+         </div>
+      </section>
+
+   </div>
+
+   <footer>
+      <p>ITWS1100 - Introduction to IT &amp; Web Science | Richard M. Plotka | Spring 2026</p>
+   </footer>
+
+</body>
+
+</html>

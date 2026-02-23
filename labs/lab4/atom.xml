@@ -3,19 +3,49 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-<title>Jake Marchetti - IITWS Labs</title>
-<subtitle>Updates and Links to my IITWS Labs</subtitle>
+  <title>Jake Marchetti – ITWS Labs</title>
+  <subtitle>Updates and links to my ITWS lab work</subtitle>
 
-<link href="projectsite/labs.html" />
-<link href="projectsite/labs.html" />
+  <link href="https://YOUR-AZURE-SITE/rss.xml" rel="self" />
+  <link href="https://YOUR-AZURE-SITE/" />
 
-<id>https://marchj6rpi.eastus.cloudapp.azure.com/</id>
-<updated>2026-02-19</updated>
+  <id>https://YOUR-AZURE-SITE/</id>
+  <updated>2026-02-19T19:00:00-05:00</updated>
 
-<author>
+  <author>
     <name>Jake Marchetti</name>
-</author>
+  </author>
 
-<entry>
-    <title>Lab 1: VM and Github Setup</title>
-    <link href="projectsite/lab1.html">
+  <entry>
+    <title>Lab 1: VM Setup</title>
+    <link href="https://YOUR-AZURE-SITE/labs/lab1.html" />
+    <id>https://YOUR-AZURE-SITE/labs/lab1.html</id>
+    <updated>2026-02-19T19:00:00-05:00</updated>
+    <summary>Documentation of virtual machine setup and configuration.</summary>
+  </entry>
+
+  <entry>
+    <title>Lab 2: HTML Resume</title>
+    <link href="https://YOUR-AZURE-SITE/labs/lab2.html" />
+    <id>https://YOUR-AZURE-SITE/labs/lab2.html</id>
+    <updated>2026-02-19T19:00:00-05:00</updated>
+    <summary>My HTML-based resume project.</summary>
+  </entry>
+
+  <entry>
+    <title>Lab 3: Personal Website</title>
+    <link href="https://YOUR-AZURE-SITE/labs/lab3.html" />
+    <id>https://YOUR-AZURE-SITE/labs/lab3.html</id>
+    <updated>2026-02-19T19:00:00-05:00</updated>
+    <summary>Development of my personal website.</summary>
+  </entry>
+
+  <entry>
+    <title>Lab 4: RSS & Atom Feeds</title>
+    <link href="https://YOUR-AZURE-SITE/labs/lab4.html" />
+    <id>https://YOUR-AZURE-SITE/labs/lab4.html</id>
+    <updated>2026-02-19T19:00:00-05:00</updated>
+    <summary>Creation of RSS 2.0 and Atom 1.0 feeds.</summary>
+  </entry>
+
+</feed>
