@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet type="text/css" href="rss.css"?>
 
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/css" href="rss.css"?>
+
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title>Jake Marchetti – ITWS Labs</title>
   <subtitle>Updates and links to my ITWS lab work</subtitle>
 
-  <link href="https://YOUR-AZURE-SITE/rss.xml" rel="self" />
-  <link href="https://YOUR-AZURE-SITE/" />
+  <link href="https://marchj6rpi.eastus.cloudapp.azure.com/iit/labs/lab4/atom.xml" rel="self" />
+  <link href="https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/" />
 
-  <id>https://YOUR-AZURE-SITE/</id>
+  <id>https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/</id>
   <updated>2026-02-19T19:00:00-05:00</updated>
 
   <author>
@@ -18,32 +21,32 @@
 
   <entry>
     <title>Lab 1: VM Setup</title>
-    <link href="https://YOUR-AZURE-SITE/labs/lab1.html" />
-    <id>https://YOUR-AZURE-SITE/labs/lab1.html</id>
+    <link href="https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab1.html" />
+    <id>https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab1.html</id>
     <updated>2026-02-19T19:00:00-05:00</updated>
     <summary>Documentation of virtual machine setup and configuration.</summary>
   </entry>
 
   <entry>
     <title>Lab 2: HTML Resume</title>
-    <link href="https://YOUR-AZURE-SITE/labs/lab2.html" />
-    <id>https://YOUR-AZURE-SITE/labs/lab2.html</id>
+    <link href="https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab2.html" />
+    <id>https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab2.html</id>
     <updated>2026-02-19T19:00:00-05:00</updated>
     <summary>My HTML-based resume project.</summary>
   </entry>
 
   <entry>
     <title>Lab 3: Personal Website</title>
-    <link href="https://YOUR-AZURE-SITE/labs/lab3.html" />
-    <id>https://YOUR-AZURE-SITE/labs/lab3.html</id>
+    <link href="https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab3.html" />
+    <id>https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab3.html</id>
     <updated>2026-02-19T19:00:00-05:00</updated>
     <summary>Development of my personal website.</summary>
   </entry>
 
   <entry>
-    <title>Lab 4: RSS & Atom Feeds</title>
-    <link href="https://YOUR-AZURE-SITE/labs/lab4.html" />
-    <id>https://YOUR-AZURE-SITE/labs/lab4.html</id>
+    <title>Lab 4: RSS and Atom Feeds</title>
+    <link href="https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab4.html" />
+    <id>https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab4.html</id>
     <updated>2026-02-19T19:00:00-05:00</updated>
     <summary>Creation of RSS 2.0 and Atom 1.0 feeds.</summary>
   </entry>

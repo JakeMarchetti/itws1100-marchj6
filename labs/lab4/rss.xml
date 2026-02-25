@@ -6,38 +6,40 @@
 
     <title>Jake Marchetti – ITWS Labs</title>
     <description>Links and updates for my ITWS lab assignments</description>
-    <link>https://YOUR-AZURE-SITE/</link>
+    <link>https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/</link>
+
+    <lastBuildDate>Tue, 19 Feb 2026 19:00:00 -0500</lastBuildDate>
     <pubDate>Tue, 19 Feb 2026 19:00:00 -0500</pubDate>
 
     <item>
       <title>Lab 1: VM Setup</title>
       <description>Documentation of virtual machine setup and configuration.</description>
-      <link>https://YOUR-AZURE-SITE/labs/lab1.html</link>
-      <guid>https://YOUR-AZURE-SITE/labs/lab1.html</guid>
+      <link>https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab1.html</link>
+      <guid>https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab1.html</guid>
       <pubDate>Tue, 19 Feb 2026 19:00:00 -0500</pubDate>
     </item>
 
     <item>
       <title>Lab 2: HTML Resume</title>
       <description>My HTML-based resume project.</description>
-      <link>https://YOUR-AZURE-SITE/labs/lab2.html</link>
-      <guid>https://YOUR-AZURE-SITE/labs/lab2.html</guid>
+      <link>https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab2.html</link>
+      <guid>https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab2.html</guid>
       <pubDate>Tue, 19 Feb 2026 19:00:00 -0500</pubDate>
     </item>
 
     <item>
       <title>Lab 3: Personal Website</title>
       <description>Development of my personal website.</description>
-      <link>https://YOUR-AZURE-SITE/labs/lab3.html</link>
-      <guid>https://YOUR-AZURE-SITE/labs/lab3.html</guid>
+      <link>https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab3.html</link>
+      <guid>https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab3.html</guid>
       <pubDate>Tue, 19 Feb 2026 19:00:00 -0500</pubDate>
     </item>
 
     <item>
-      <title>Lab 4: RSS & Atom Feeds</title>
+      <title>Lab 4: RSS and Atom Feeds</title>
       <description>Creation of RSS 2.0 and Atom 1.0 feeds.</description>
-      <link>https://YOUR-AZURE-SITE/labs/lab4.html</link>
-      <guid>https://YOUR-AZURE-SITE/labs/lab4.html</guid>
+      <link>https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab4.html</link>
+      <guid>https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab4.html</guid>
       <pubDate>Tue, 19 Feb 2026 19:00:00 -0500</pubDate>
     </item>
 
