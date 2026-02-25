@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/css" href="rss.css"?>
 
-<rss version="2.0">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
 
     <title>Jake Marchetti – ITWS Labs</title>
     <description>Links and updates for my ITWS lab assignments</description>
     <link>https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/</link>
+
+    <atom:link href="http://marchj6rpi.eastus.cloudapp.azure.com/iit/labs/lab4/rss.xml" rel="self" type="application/rss+xml" />
 
     <lastBuildDate>Tue, 19 Feb 2026 19:00:00 -0500</lastBuildDate>
     <pubDate>Tue, 19 Feb 2026 19:00:00 -0500</pubDate>
@@ -16,7 +18,7 @@
       <description>Documentation of virtual machine setup and configuration.</description>
       <link>https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab1.html</link>
       <guid>https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab1.html</guid>
-      <pubDate>Tue, 19 Feb 2026 19:00:00 -0500</pubDate>
+      <pubDate>Tue, 17 Feb 2026 19:00:00 -0500</pubDate>
     </item>
 
     <item>
@@ -24,7 +26,7 @@
       <description>My HTML-based resume project.</description>
       <link>https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab2.html</link>
       <guid>https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab2.html</guid>
-      <pubDate>Tue, 19 Feb 2026 19:00:00 -0500</pubDate>
+      <pubDate>Tue, 17 Feb 2026 19:00:00 -0500</pubDate>
     </item>
 
     <item>
@@ -32,7 +34,7 @@
       <description>Development of my personal website.</description>
       <link>https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab3.html</link>
       <guid>https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab3.html</guid>
-      <pubDate>Tue, 19 Feb 2026 19:00:00 -0500</pubDate>
+      <pubDate>Tue, 17 Feb 2026 19:00:00 -0500</pubDate>
     </item>
 
     <item>
@@ -40,7 +42,7 @@
       <description>Creation of RSS 2.0 and Atom 1.0 feeds.</description>
       <link>https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab4.html</link>
       <guid>https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab4.html</guid>
-      <pubDate>Tue, 19 Feb 2026 19:00:00 -0500</pubDate>
+      <pubDate>Wed, 25 Feb 2026 19:00:00 -0500</pubDate>
     </item>
 
   </channel>
