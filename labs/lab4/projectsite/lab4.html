@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lab 4 - RSS & Atom Feeds</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <div class="nav">
+      <a href="index.html">Home</a>
+
+      <div class="dropdown">
+        <a class="dropbtn active" href="labs.html">Labs</a>
+        <div class="dropdown-content">
+          <a href="lab1.html">Lab 1</a>
+          <a href="lab2.html">Lab 2</a>
+          <a href="lab3.html">Lab 3</a>
+          <a href="lab4.html">Lab 4</a>
+        </div>
+      </div>
+
+      <a href="about.html">About Me</a>
+    </div>
+  </nav>
+
+  <main class="lab-page">
+    <div class="lab-header">
+      <h1 class="lab-title-banner">Lab 4 — RSS 2.0 & Atom 1.0 Feeds</h1>
+    </div>
+
+    <section class="gallery">
+      <article class="img-item">
+        <figure>
+          <img src="images/lab4-images/RSS-Feed.png" alt="RSS feed screenshot">
+          <figcaption>RSS 2.0 Feed</figcaption>
+        </figure>
+        <div class="img-desc">
+          <p>
+            This RSS 2.0 feed contains at least four items linking to my lab pages and includes the required
+            channel and item elements (title, link, description).
+          </p>
+        </div>
+      </article>
+
+      <article class="img-item">
+        <figure>
+          <img src="images/lab4-images/ATOM-Feed.png" alt="Atom feed screenshot">
+          <figcaption>Atom 1.0 Feed</figcaption>
+        </figure>
+        <div class="img-desc">
+          <p>
+            This Atom 1.0 feed contains at least four entries linking to my lab pages and includes required
+            feed elements (title, id, updated, author) and per-entry metadata.
+          </p>
+        </div>
+      </article>
+
+      <article class="img-item">
+        <figure>
+          <img src="images/lab4-images/RSS-CSS.png" alt="XML CSS styling screenshot">
+          <figcaption>XML Styling (rss.css)</figcaption>
+        </figure>
+        <div class="img-desc">
+          <p>
+            Both feeds include a stylesheet processing instruction linking to <strong>rss.css</strong>,
+            which improves readability when the XML is viewed in a browser.
+          </p>
+          <p>
+            CSS File:
+            <a href="rss.css" target="_blank" rel="noopener">rss.css</a>
+          </p>
+        </div>
+      </article>
+    </section>
+
+    <aside class="description-box">
+      <h2>Lab 4 Overview</h2>
+      <p>
+        Summary: For this lab, I created two valid XML feeds: an <strong>RSS 2.0</strong> feed and an
+        <strong>Atom 1.0</strong> feed. Each feed includes a minimum of four items/entries that link to my
+        ITWS lab pages.
+      </p>
+
+      <h2>Feed Links</h2>
+      <p>
+        RSS Feed:
+        <a href="http://marchj6rpi.eastus.cloudapp.azure.com/iit/labs/lab4/rss.xml" target="_blank" rel="noopener">
+          http://marchj6rpi.eastus.cloudapp.azure.com/iit/labs/lab4/rss.xml
+        </a>
+      </p>
+      <p>
+        Atom Feed:
+        <a href="http://marchj6rpi.eastus.cloudapp.azure.com/iit/labs/lab4/atom.xml" target="_blank" rel="noopener">
+          http://marchj6rpi.eastus.cloudapp.azure.com/iit/labs/lab4/atom.xml
+        </a>
+      </p>
+    </aside>
+
+  </main>
+</body>
+</html>
