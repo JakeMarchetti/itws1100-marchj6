@@ -182,3 +182,64 @@ Landing Page
 
 Lab 04 landing page created
 Includes feed links and descriptions
+
+
+
+Lab 05 – JavaScript Form Validation
+Overview:
+This lab involved adding client-side JavaScript form validation and interactive form behavior to a contact form page, while also correcting HTML and CSS validation issues and deploying the completed work to Azure.
+
+Form Validation:
+JavaScript validation added to the form
+No required fields may be left blank
+Validation checks included for:
+First Name
+Last Name
+Title
+Organization
+Nickname
+Comments
+
+User Feedback:
+Alert messages displayed when required fields are missing
+Cursor returns focus to the field requiring correction
+Success alert displayed when the form is submitted correctly
+
+Textarea Behavior:
+Textarea clears default instructional text when clicked
+Only the text "Please enter your comments" is removed
+User-entered comments are preserved
+If left blank when focus is lost, the default instructional text is restored
+
+Additional JavaScript Feature:
+A button was added below the Contact Information section
+The button displays an alert in the format:
+"firstName lastName is nickname"
+
+HTML & CSS Corrections:
+Crime #1 in the HTML was corrected
+Crime #4 in the CSS was corrected by applying a focused field background color of #fee
+
+Validation:
+HTML validates successfully
+CSS validates successfully
+JavaScript formatted consistently according to course guidelines
+
+Code Quality:
+Consistent indentation used throughout
+Curly braces used on all control statements
+External CSS and JavaScript files linked properly
+Readable formatting and structure maintained
+
+Repository Workflow:
+lab05 branch created and used for development
+Multiple commits showing development progress
+Pull request created and merged into main
+
+Live Deployment
+
+Lab 05 URL:
+http://marchj6rpi.eastus.cloudapp.azure.com/iit/labs/lab05/
+
+GitHub:
+Repository updated and deployed successfully to Azure
