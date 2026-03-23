@@ -239,7 +239,74 @@ Pull request created and merged into main
 Live Deployment
 
 Lab 05 URL:
-http://marchj6rpi.eastus.cloudapp.azure.com/iit/labs/lab05/
+http://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab5.html
+
+GitHub:
+Repository updated and deployed successfully to Azure
+
+
+
+Lab 06 – jQuery
+Overview:
+This lab involved using jQuery to add interactive behavior to a webpage, including event handling, DOM manipulation, visual effects, class toggling, dynamic list item creation, and deployment of the completed work to Azure.
+
+jQuery Setup:
+jQuery was linked properly before the custom lab6.js file
+All JavaScript code was placed inside the document ready function
+The page confirms DOM readiness before allowing interaction
+
+Problem 1 – Heading Interaction:
+Clicking the h1 changes "Your Name" to my actual name
+The name text changes to small caps
+The text color changes to pink, which is neither blue nor black
+The font size changes to 200% of normal size
+
+Problem 2 – Hide and Show Text:
+The lorem ipsum paragraphs disappear over a 2 second duration when "Hide Text" is clicked
+The paragraphs reappear over a 3.3 second duration when "Show Text" is clicked
+Default link behavior was prevented so the page does not jump unexpectedly
+
+Problem 3 – List Item Class Toggling:
+Clicking a normal list item adds the .red CSS class using jQuery
+Clicking a red list item removes the .red class
+This creates a toggle effect between normal and red list items
+
+Problem 4 – Add List Item:
+Clicking the "Add list item" button appends a new li element to the end of the unordered list
+The new item is added dynamically using jQuery .append()
+
+Problem 5 – New List Item Click Behavior:
+At first, newly added list items did not behave like the original list items when clicked
+This happened because the original click handler was attached only to the li elements that existed when the page first loaded
+New li elements added later with .append() did not automatically receive that click handler
+This issue was fixed using jQuery event delegation with .on('click', 'li', ...) attached to the parent #labList element
+After this fix, both original and newly added list items correctly toggle the .red class when clicked
+
+Toggle Text Feature:
+The "Toggle Text" link uses another jQuery method, .toggle()
+This allows the paragraphs to alternate between shown and hidden states with animation
+Default link behavior was prevented for smoother interaction
+
+Validation:
+HTML updated to use the proper viewport meta tag format
+CSS validates successfully
+JavaScript is organized and formatted consistently according to course guidelines
+
+Code Quality:
+Consistent indentation used throughout
+Event handlers are grouped clearly inside the document ready block
+External CSS and JavaScript files are linked properly
+Readable formatting and structure were maintained
+
+Repository Workflow:
+lab06 branch created and used for development
+Multiple commits showing development progress
+Pull request created and merged into main
+
+Live Deployment
+
+Lab 06 URL:
+http://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab6.html
 
 GitHub:
 Repository updated and deployed successfully to Azure
