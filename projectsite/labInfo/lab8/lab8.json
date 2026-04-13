@@ -1,0 +1,60 @@
+{
+  "labs": [
+    {
+      "title": "Lab 1",
+      "description": "Setup Github and my azure instance. Made first HTML program.",
+      "link": "lab1.html",
+      "image": "images/lab1-images/Screenshot 2026-02-17 144255.png",
+      "alt": "lab 1 img"
+    },
+    {
+      "title": "Lab 2",
+      "description": "Created my resume using HTML and CSS principles.",
+      "link": "lab2.html",
+      "image": "images/IMG_2063.jpg",
+      "alt": "lab 2 img"
+    },
+    {
+      "title": "Lab 3",
+      "description": "Created this IITWS lab site; refined using AI assistance.",
+      "link": "lab3.html",
+      "image": "images/IITWS-site-logo.jpg",
+      "alt": "lab 3 img"
+    },
+    {
+      "title": "Lab 4",
+      "description": "Learned how to implement RSS and Atom feeds and their importance.",
+      "link": "lab4.html",
+      "image": "images/lab4-images/labPage4.png",
+      "alt": "lab 4 img"
+    },
+    {
+      "title": "Lab 5",
+      "description": "We used java script to manipulate HTML document attributes.",
+      "link": "lab5.html",
+      "image": "images/lab5-images/javaPage5.png",
+      "alt": "lab 5 img"
+    },
+    {
+      "title": "Lab 6",
+      "description": "Downloaded Jquery and implemented functions to an HTML document.",
+      "link": "lab6.html",
+      "image": "images/lab6-images/jqPage.png",
+      "alt": "lab 6 img"
+    },
+    {
+      "title": "Lab 7",
+      "description": "We made a mockup for our group project gym application.",
+      "link": "lab7.html",
+      "image": "images/lab7-images/lab7.png",
+      "alt": "lab 7 img"
+    },
+    {
+      "title": "Lab 8",
+      "description": "We used AJAX & java script to create a new lab page.",
+      "link": "lab8.html",
+      "image": "images/lab8-images/lab8.png",
+      "alt": "lab 8 img"
+    }
+  ]
+} 
