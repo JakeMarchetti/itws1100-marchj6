@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="rss.css"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jake Marchetti – ITWS Labs</title>
+    <description>Links and updates for my ITWS lab assignments</description>
+    <link>https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/</link>
+
+    <atom:link
+      href="https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/rss.xml"
+      rel="self"
+      type="application/rss+xml" />
+
+    <lastBuildDate>Tue, 17 Feb 2026 19:00:00 -0500</lastBuildDate>
+    <pubDate>Tue, 17 Feb 2026 19:00:00 -0500</pubDate>
+
+    <item>
+      <title>Lab 1</title>
+      <description>Setup Github and my azure instance. Made first HTML program.</description>
+      <link>https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab1.html</link>
+      <guid>https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab1.html</guid>
+      <pubDate>Sat, 17 Feb 2024 00:00:00 -0500</pubDate>
+    </item>
+
+    <item>
+      <title>Lab 2</title>
+      <description>Created my resume using HTML and CSS principles.</description>
+      <link>https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab2.html</link>
+      <guid>https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab2.html</guid>
+      <pubDate>Sat, 24 Feb 2024 00:00:00 -0500</pubDate>
+    </item>
+
+    <item>
+      <title>Lab 3</title>
+      <description>Created this IITWS lab site; refined using AI assistance.</description>
+      <link>https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab3.html</link>
+      <guid>https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab3.html</guid>
+      <pubDate>Sat, 02 Mar 2024 00:00:00 -0500</pubDate>
+    </item>
+
+    <item>
+      <title>Lab 4</title>
+      <description>Learned how to implement RSS and Atom feeds and their importance.</description>
+      <link>https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab4.html</link>
+      <guid>https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab4.html</guid>
+      <pubDate>Sat, 09 Mar 2024 00:00:00 -0500</pubDate>
+    </item>
+
+    <item>
+      <title>Lab 5</title>
+      <description>We used java script to manipulate HTML document attributes.</description>
+      <link>https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab5.html</link>
+      <guid>https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab5.html</guid>
+      <pubDate>Sat, 16 Mar 2024 00:00:00 -0500</pubDate>
+    </item>
+
+    <item>
+      <title>Lab 6</title>
+      <description>Downloaded Jquery and implemented functions to an HTML document.</description>
+      <link>https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab6.html</link>
+      <guid>https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab6.html</guid>
+      <pubDate>Sat, 23 Mar 2024 00:00:00 -0500</pubDate>
+    </item>
+
+    <item>
+      <title>Lab 7</title>
+      <description>We made a mockup for our group project gym application.</description>
+      <link>https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab7.html</link>
+      <guid>https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab7.html</guid>
+      <pubDate>Sat, 30 Mar 2024 00:00:00 -0500</pubDate>
+    </item>
+
+    <item>
+      <title>Lab 8</title>
+      <description>We used AJAX &amp; java script to create a new lab page.</description>
+      <link>https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab8.html</link>
+      <guid>https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab8.html</guid>
+      <pubDate>Sun, 07 Apr 2024 00:00:00 -0500</pubDate>
+    </item>
+  </channel>
+</rss>

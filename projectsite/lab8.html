@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lab 8 - json & Ajax</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+   <script src="labInfo/lab8/lab8.js" defer></script>
+</head>
+<body>
+   <nav>
+  <div class="nav">
+    <a href="index.html">Home</a>
+
+    <div class="dropdown">
+      <a class="dropbtn active" href="labs.html">Labs</a>
+      <div class="dropdown-content">
+      <a href="lab1.html">Lab 1</a>
+      <a href="lab2.html">Lab 2</a>
+      <a href="lab3.html">Lab 3</a>
+      <a href="lab4.html">Lab 4</a>
+      <a href="lab5.html">Lab 5</a>
+      <a href="lab6.html">Lab 6</a>
+      <a href="lab7.html">Lab 7</a>
+      <a href="lab8.html">Lab 8</a>
+
+      </div>
+    </div>
+
+    <a href="about.html">About Me</a>
+  </div>
+</nav>
+
+  <main class="lab-page">
+    <div class="lab-header">
+      <h1 class="lab-title-banner">Lab 8 - JSON & Ajax</h1>
+    </div>
+
+    <section class="gallery">
+      <article class="img-item">
+        <figure>
+          <img src="images/lab8-images/lab8-code.png" alt = "Lab8ss1">
+          <figcaption>Lab List Building Helper Function</figcaption>
+        </figure>
+        <div class="img-desc">
+          <p>This is the proper structure of how to use Ajax and JSON in my web application to build 
+            the labs page only using the info given in the JSON file.</p>
+        </div>
+      </article>
+
+      <article class="img-item">
+        <figure>
+          <img src="images/lab8-images/lab8-json.png" alt="Lab8ss2">
+          <figcaption>JSON Data Structure</figcaption>
+        </figure>
+        <div class="img-desc">
+          <p>This is the JSON data structure that contains the information for each lab.</p>
+        </div>
+      </article>
+
+      <article class="img-item">
+        <figure>
+          <img src="images/lab8-images/lab8-labPage.png" alt="Lab8ss3">
+          <figcaption>Lab Page Updated</figcaption>
+        </figure>
+        <div class="img-desc">
+          <p>This is the updated labs page, dynamically generated using JSON data and Ajax.</p>
+        </div>
+      </article>
+    </section>
+<aside class="description-box">
+      <h2>Lab 8 Notes</h2>
+      <p>Summary: For this lab I was tasked with using JSON and Ajax to dynamically generate the labs page. 
+        I created a JSON file with all the necessary information for each lab, then used an Ajax call to retrieve that data and a helper function to build the HTML structure for each lab on the labs page.
+      </p>
+      <p>Lessons learned: Using json & ajax in html, alterting HTML docs using jquery functions and building dynamic content.</p>
+    <p>Programs used to build this site: <a href="labs.html">labs.html</a>,
+       <a href="labInfo/lab8/lab8.js">lab8.js</a>,
+       <a href="labInfo/lab8/lab8.json"> lab8.json</a></p>
+      
+    </aside>
+        <button id="backToTop">Top</button>
+
+  </main>
+</body>
+</html>

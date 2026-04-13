@@ -1,0 +1,26 @@
+rss, feed {
+  display: block;
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+channel, entry, item {
+  display: block;
+  padding: 12px;
+  margin: 12px 0;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+title {
+  display: block;
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+link, id, updated, description, summary, content {
+  display: block;
+  margin: 4px 0;
+  color: #333;
+}
