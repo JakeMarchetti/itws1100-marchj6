@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/css" href="rss.css"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Jake Marchetti – ITWS Labs</title>
+  <subtitle>Updates and links to my ITWS lab work</subtitle>
+
+  <link href="https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/atom.xml" rel="self" />
+  <link href="https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/" />
+
+  <id>https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/</id>
+  <updated>2026-02-19T19:00:00-05:00</updated>
+
+  <author>
+    <name>Jake Marchetti</name>
+  </author>
+
+  <entry>
+    <title>Lab 1</title>
+    <link href="https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab1.html" />
+    <id>https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab1.html</id>
+    <updated>2024-02-17T00:00:00-05:00</updated>
+    <summary>Setup Github and my azure instance. Made first HTML program.</summary>
+  </entry>
+
+  <entry>
+    <title>Lab 2</title>
+    <link href="https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab2.html" />
+    <id>https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab2.html</id>
+    <updated>2024-02-24T00:00:00-05:00</updated>
+    <summary>Created my resume using HTML and CSS principles.</summary>
+  </entry>
+
+  <entry>
+    <title>Lab 3</title>
+    <link href="https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab3.html" />
+    <id>https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab3.html</id>
+    <updated>2024-03-02T00:00:00-05:00</updated>
+    <summary>Created this IITWS lab site; refined using AI assistance.</summary>
+  </entry>
+
+  <entry>
+    <title>Lab 4</title>
+    <link href="https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab4.html" />
+    <id>https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab4.html</id>
+    <updated>2024-03-09T00:00:00-05:00</updated>
+    <summary>Learned how to implement RSS and Atom feeds and their importance.</summary>
+  </entry>
+
+  <entry>
+    <title>Lab 5</title>
+    <link href="https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab5.html" />
+    <id>https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab5.html</id>
+    <updated>2024-03-16T00:00:00-05:00</updated>
+    <summary>We used java script to manipulate HTML document attributes.</summary>
+  </entry>
+
+  <entry>
+    <title>Lab 6</title>
+    <link href="https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab6.html" />
+    <id>https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab6.html</id>
+    <updated>2024-03-23T00:00:00-05:00</updated>
+    <summary>Downloaded Jquery and implemented functions to an HTML document.</summary>
+  </entry>
+
+  <entry>
+    <title>Lab 7</title>
+    <link href="https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab7.html" />
+    <id>https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab7.html</id>
+    <updated>2024-03-30T00:00:00-05:00</updated>
+    <summary>We made a mockup for our group project gym application.</summary>
+  </entry>
+
+  <entry>
+    <title>Lab 8</title>
+    <link href="https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab8.html" />
+    <id>https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab8.html</id>
+    <updated>2024-04-07T00:00:00-05:00</updated>
+    <summary>We used AJAX and JavaScript to create a new lab page.</summary>
+  </entry>
+</feed>

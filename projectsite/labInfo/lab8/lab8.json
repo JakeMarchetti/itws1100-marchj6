@@ -56,5 +56,116 @@
       "image": "images/lab8-images/lab8.png",
       "alt": "lab 8 img"
     }
+  ],
+  
+  "rss": [
+    {
+      "title": "Lab 1",
+      "description": "Setup Github and my azure instance. Made first HTML program.",
+      "link": "https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab1.html",
+      "guid": "https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab1.html",
+      "pubDate": "2024-02-17"
+    },
+    {
+      "title": "Lab 2",
+      "description": "Created my resume using HTML and CSS principles.",
+      "link": "https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab2.html",
+      "guid": "https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab2.html",
+      "pubDate": "2024-02-24"
+    },
+    {
+      "title": "Lab 3",
+      "description": "Created this IITWS lab site; refined using AI assistance.",
+      "link": "https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab3.html",
+      "guid": "https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab3.html",
+      "pubDate": "2024-03-02"
+    },
+    {
+      "title": "Lab 4",
+      "description": "Learned how to implement RSS and Atom feeds and their importance.",
+      "link": "https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab4.html",
+      "guid": "https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab4.html",
+      "pubDate": "2024-03-09"
+    },
+    {
+      "title": "Lab 5",
+      "description": "We used java script to manipulate HTML document attributes.",
+      "link": "https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab5.html",
+      "guid": "https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab5.html",
+      "pubDate": "2024-03-16"
+    },
+    {
+      "title": "Lab 6",
+      "description": "Downloaded Jquery and implemented functions to an HTML document.",
+      "link": "https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab6.html",
+      "guid": "https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab6.html",
+      "pubDate": "2024-03-23"
+    },
+    {
+      "title": "Lab 7",
+      "description": "We made a mockup for our group project gym application.",
+      "link": "https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab7.html",
+      "guid": "https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab7.html",
+      "pubDate": "2024-03-30"
+    },
+    {
+      "title": "Lab 8",
+      "description": "We used AJAX & java script to create a new lab page.",
+      "link": "https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab8.html",
+      "guid": "https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab8.html",
+      "pubDate": "2024-04-07"
+    }
+  ],
+
+  "atom": [
+    {
+      "title": "Lab 1",
+      "link": "https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab1.html",
+      "updated": "2024-02-17",
+      "summary": "Setup Github and my azure instance. Made first HTML program."
+    },
+    {
+      "title": "Lab 2",
+      "link": "https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab2.html",
+      "updated": "2024-02-24",
+      "summary": "Created my resume using HTML and CSS principles."
+    },
+    {
+      "title": "Lab 3",
+      "link": "https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab3.html",
+      "updated": "2024-03-02",
+      "summary": "Created this IITWS lab site; refined using AI assistance."
+    },
+    {
+      "title":"Lab 4",
+      "link": "https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab4.html",
+      "updated": "2024-03-09",
+      "summary": "Learned how to implement RSS and Atom feeds and their importance."
+    },
+    {
+      "title": "Lab 5",
+      "link": "https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab5.html",
+      "updated": "2024-03-16",
+      "summary": "We used java script to manipulate HTML document attributes."
+    },
+    {
+      "title": "Lab 6",
+      "link": "https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab6.html",
+      "updated": "2024-03-23",
+      "summary": "Downloaded Jquery and implemented functions to an HTML document."
+    },
+    {
+      "title": "Lab 7",
+      "link": "https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab7.html",
+      "updated": "2024-03-30",
+      "summary": "We made a mockup for our group project gym application."
+    },
+    {
+      "title": "Lab 8",
+      "link": "https://marchj6rpi.eastus.cloudapp.azure.com/iit/projectsite/lab8.html",
+      "updated": "2024-04-07",
+      "summary": "We used AJAX & java script to create a new lab page."
+    }
   ]
+  
 } 

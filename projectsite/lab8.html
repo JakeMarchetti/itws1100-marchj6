@@ -2,8 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Lab 6 - Jquery</title>
+  <title>Lab 8 - json & Ajax</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+   <script src="labInfo/lab8/lab8.js" defer></script>
 </head>
 <body>
    <nav>
@@ -31,56 +33,54 @@
 
   <main class="lab-page">
     <div class="lab-header">
-      <h1 class="lab-title-banner">Lab 6 - Jquery</h1>
+      <h1 class="lab-title-banner">Lab 8 - JSON & Ajax</h1>
     </div>
 
     <section class="gallery">
       <article class="img-item">
         <figure>
-          <img src="images/lab6-images/newList.png" alt = "Lab6ss1">
-          <figcaption>New List Function</figcaption>
+          <img src="images/lab8-images/lab8-code.png" alt = "Lab8ss1">
+          <figcaption>Lab List Building Helper Function</figcaption>
         </figure>
         <div class="img-desc">
-          <p>This is the structure of an on click jquerey attribute. 
-            It is able to be called on an indiviudal ID and adjust it per click.</p>
+          <p>This is the proper structure of how to use Ajax and JSON in my web application to build 
+            the labs page only using the info given in the JSON file.</p>
         </div>
       </article>
 
       <article class="img-item">
         <figure>
-          <img src="images/lab6-images/homePage.png" alt="Lab6ss2">
-          <figcaption>Jquery CSS Alterations</figcaption>
+          <img src="images/lab8-images/lab8-json.png" alt="Lab8ss2">
+          <figcaption>JSON Data Structure</figcaption>
         </figure>
         <div class="img-desc">
-          <p>These are the resultant CSS alterations from the on click jquery functions.</p>
+          <p>This is the JSON data structure that contains the information for each lab.</p>
         </div>
       </article>
 
       <article class="img-item">
         <figure>
-          <img src="images/lab6-images/red.png" alt="Lab6ss3">
-          <figcaption>Using Jquery on HTML Documents</figcaption>
+          <img src="images/lab8-images/lab8-labPage.png" alt="Lab8ss3">
+          <figcaption>Lab Page Updated</figcaption>
         </figure>
         <div class="img-desc">
-          <p>Creation of an onclick jquery function which works on a specified item of a list ID. </p>
+          <p>This is the updated labs page, dynamically generated using JSON data and Ajax.</p>
         </div>
       </article>
     </section>
 <aside class="description-box">
-      <h2>Lab 6 Notes</h2>
-      <p>Summary: For this lab, we were tasked with editing a document form html file using javascript and jquery. 
-        I first needed to download jquery, but for this I included the donwload link in the HTML doc and it worked.
-        There were a series of problems that required us to build functions that altered certian aspects of the CSS
-        when different IDs or elements of IDs were clicked. I learned a lot about the jquery syntax and and formatting
-        from these exercises.
+      <h2>Lab 8 Notes</h2>
+      <p>Summary: For this lab I was tasked with using JSON and Ajax to dynamically generate the labs page. 
+        I created a JSON file with all the necessary information for each lab, then used an Ajax call to retrieve that data and a helper function to build the HTML structure for each lab on the labs page.
       </p>
-      <p>Lessons learned: Using javascript & jquery in html, alterting CSS and HTML docs using jquery functions </p>
-    <p>Programs used to build this site: <a href="labInfo/lab6/lab6.html">lab6.html</a>,
-       <a href="labInfo/lab6/lab6.js">lab6.js</a>,
-       <a href="labInfo/lab6/lab6.css"> lab6.css</a></p>
+      <p>Lessons learned: Using json & ajax in html, alterting HTML docs using jquery functions and building dynamic content.</p>
+    <p>Programs used to build this site: <a href="labs.html">labs.html</a>,
+       <a href="labInfo/lab8/lab8.js">lab8.js</a>,
+       <a href="labInfo/lab8/lab8.json"> lab8.json</a></p>
       
     </aside>
-    
+        <button id="backToTop">Top</button>
+
   </main>
 </body>
 </html>
