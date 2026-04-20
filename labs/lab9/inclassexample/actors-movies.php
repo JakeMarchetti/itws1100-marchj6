@@ -17,7 +17,8 @@ include('includes/head.inc.php');
 $dbOk = false;
 
 /* Change these if your real db credentials are different */
-@ $db = new mysqli('localhost', 'root', 'root', 'iit');
+include('includes/configs.php');
+@ $db = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
 if ($db->connect_error) {
   echo '<div class="messages">Could not connect to the database. Error: ';
