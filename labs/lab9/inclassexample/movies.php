@@ -20,7 +20,9 @@ $dbOk = false;
 
 /* Create a new database connection object, passing in the host, username,
    password, and database to use. The "@" suppresses errors. */
-@ $db = new mysqli('localhost', 'root', 'Liza7575', 'iit');
+include('includes/configs.php');
+@ $db = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+
 
 if ($db->connect_error) {
    echo '<div class="messages">Could not connect to the database. Error: ';

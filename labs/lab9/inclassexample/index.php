@@ -21,7 +21,8 @@ $dbOk = false;
 
 /* Create a new database connection object, passing in the host, username,
    password, and database to use. The "@" suppresses errors. */
-@ $db = new mysqli('localhost', 'root', 'Liza7575', 'iit');
+   include('includes/configs.php');
+   @ $db = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
 if ($db->connect_error) {
    echo '<div class="messages">Could not connect to the database. Error: ';
@@ -87,8 +88,7 @@ if ($havePost) {
          $statement = $db->prepare($insQuery);
 
          // first, last, dob must match the SQL order above
-         $statement->bind_param("sss", $firstNamesForDb, $lastNameForDb, $dobForDb);
-         $statement->execute();
+         $statement->bind_param("sss", $firstNamesForDb, $lastNameForDb, $dobForDb);         $statement->execute();
 
          echo '<div class="messages"><h4>Success: ' . $statement->affected_rows . ' actor added to database.</h4>';
          echo $firstNames . ' ' . $lastName . ', born ' . $dob . '</div>';
