@@ -5,7 +5,7 @@ function buildMenu() {
 	$menu = array(
 		'index' => 'actors',
 		'movies' => 'movies',
-    'actorsmovies' => 'movies + actors'
+    'actors-movies' => 'movies + actors'
 	);
 
 	// construct the menu, setting the current menu item 'selected' if
