@@ -22,7 +22,7 @@ $dbOk = false;
 
 /* Create a new database connection object, passing in the host, username,
      password, and database to use. The "@" suppresses errors. */
-@$db = new mysqli('localhost', 'root', 'root', 'iitF23');
+@$db = new mysqli('localhost', 'root', 'root', 'iit');
 
 if ($db->connect_error) {
    echo '<div class="messages">Could not connect to the database. Error: ';
@@ -93,7 +93,7 @@ if ($havePost) {
 
          // Setup a prepared statement. Alternately, we could write an insert statement - but
          // *only* if we escape our data using addslashes() or (better) mysqli_real_escape_string().
-         $insQuery = "insert into actors (`last_name`,`first_names`,`dob`) values(?,?,?)";
+         $insQuery = "INSERT INTO actors (`first`,`last`,`dob`) VALUES (?,?,?)";
          $statement = $db->prepare($insQuery);
          // bind our variables to the question marks
          $statement->bind_param("sss", $lastNameForDb, $firstNamesForDb, $dobForDb);
@@ -141,7 +141,7 @@ if ($havePost) {
    <?php
    if ($dbOk) {
 
-      $query = 'select * from actors order by last_name';
+      $query = 'SELECT * FROM actors ORDER BY last, first';
       $result = $db->query($query);
       $numRecords = $result->num_rows;
 
@@ -153,8 +153,8 @@ if ($havePost) {
          } else {
             echo "\n" . '<tr class="odd" id="actor-' . $record['actorid'] . '"><td>';
          }
-         echo htmlspecialchars($record['last_name']) . ', ';
-         echo htmlspecialchars($record['first_names']);
+         echo htmlspecialchars($record['last']) . ', ';
+         echo htmlspecialchars($record['first']);
          echo '</td><td>';
          echo htmlspecialchars($record['dob']);
          echo '</td><td>';
