@@ -247,3 +247,7 @@ Requirements:
 - leaderboard display
 
 Keep the HTML tags and class names clean and easy to style.
+
+Debugging/refinement (agentic AI chat gpt 5.4 Codex)
+
+prompt 7:
