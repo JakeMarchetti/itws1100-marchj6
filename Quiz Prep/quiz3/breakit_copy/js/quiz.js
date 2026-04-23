@@ -1,4 +1,5 @@
-// Main browser logic for the NFL trivia game.
+// Intentionally vulnerable copy for the break-it exercise.
+// Do not deploy this file.
 
 const setupPanel = document.querySelector('#setupPanel');
 const quizPanel = document.querySelector('#quizPanel');
@@ -97,7 +98,7 @@ async function startGame(event) {
 function showQuestion() {
     const question = game.questions[game.currentIndex];
     const questionNumber = game.currentIndex + 1;
-    const totalText = ` of ${game.questions.length}`;
+    const totalText = game.mode === 'general' ? ` of 10` : '';
 
     scoreText.textContent = game.score;
     progressText.textContent = `Question ${questionNumber}${totalText}`;
@@ -108,33 +109,34 @@ function showQuestion() {
     showMessage(quizMessage, '');
 
     const options = [
-        { label: 'A', text: question.option_a, isCorrect: question.correct_option === 'A' },
-        { label: 'B', text: question.option_b, isCorrect: question.correct_option === 'B' },
-        { label: 'C', text: question.option_c, isCorrect: question.correct_option === 'C' },
-        { label: 'D', text: question.option_d, isCorrect: question.correct_option === 'D' }
+        ['A', question.option_a],
+        ['B', question.option_b],
+        ['C', question.option_c],
+        ['D', question.option_d]
     ];
 
-    shuffleArray(options).forEach((option) => {
+    options.forEach(([letter, text]) => {
         const button = document.createElement('button');
         button.type = 'button';
         button.className = 'answer-button';
-        button.textContent = option.text;
-        button.dataset.correct = option.isCorrect ? '1' : '0';
-        button.addEventListener('click', () => chooseAnswer(option.isCorrect, button));
+        button.textContent = `${letter}. ${text}`;
+        button.addEventListener('click', () => chooseAnswer(letter, button));
         answers.appendChild(button);
     });
 }
 
-function chooseAnswer(isCorrect, clickedButton) {
+function chooseAnswer(choice, clickedButton) {
     if (game.finished) {
         return;
     }
 
+    const question = game.questions[game.currentIndex];
+    const isCorrect = choice === question.correct_option;
     const buttons = answers.querySelectorAll('.answer-button');
 
     buttons.forEach((button) => {
         button.disabled = true;
-        if (button.dataset.correct === '1') {
+        if (button.textContent.startsWith(`${question.correct_option}.`)) {
             button.classList.add('correct');
         }
     });
@@ -170,7 +172,7 @@ function chooseAnswer(isCorrect, clickedButton) {
 async function finishGame() {
     game.finished = true;
 
-    const totalQuestions = game.mode === 'general' ? 10 : game.questions.length;
+    const totalQuestions = game.mode === 'general' ? 10 : Math.max(game.currentIndex + 1, game.score);
     const title = getPerformanceTitle(game.score, totalQuestions, game.difficulty, game.mode);
 
     quizPanel.classList.add('hidden');
@@ -245,9 +247,9 @@ async function loadLeaderboard() {
             const row = document.createElement('tr');
             row.innerHTML = `
                 <td>${index + 1}</td>
-                <td>${escapeHtml(entry.player_name)}</td>
+                <td>${entry.player_name}</td>
                 <td>${entry.score}/${entry.total_questions}</td>
-                <td>${escapeHtml(entry.performance_title)}</td>
+                <td>${entry.performance_title}</td>
                 <td>${formatDate(entry.played_at)}</td>
             `;
             leaderboardBody.appendChild(row);
@@ -261,14 +263,21 @@ function getPerformanceTitle(score, totalQuestions, difficulty, mode) {
     const percent = totalQuestions > 0 ? score / totalQuestions : 0;
 
     if (difficulty === 'easy') {
-        if (percent >= 0.7) return 'Pro Bowler';
-        if (percent >= 0.35) return 'Starter';
+        if (percent >= 0.8) return 'Pro Bowler';
+        if (percent >= 0.4) return 'Starter';
         return 'Benchwarmer';
     }
 
-    if (percent >= 0.85) return 'Hall of Fame';
-    if (percent >= 0.65) return 'All-Pro';
-    if (percent >= 0.35) return 'Pro Bowler';
+    if (mode === 'sudden_death') {
+        if (score >= 15) return 'Hall of Fame';
+        if (score >= 10) return 'All-Pro';
+        if (score >= 5) return 'Pro Bowler';
+        return 'Starter';
+    }
+
+    if (score >= 10) return 'Hall of Fame';
+    if (score >= 8) return 'All-Pro';
+    if (score >= 5) return 'Pro Bowler';
     return 'Starter';
 }
 
@@ -309,15 +318,4 @@ function escapeHtml(value) {
         .replace(/>/g, '&gt;')
         .replace(/"/g, '&quot;')
         .replace(/'/g, '&#039;');
-}
-
-function shuffleArray(items) {
-    const copy = [...items];
-
-    for (let i = copy.length - 1; i > 0; i -= 1) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [copy[i], copy[j]] = [copy[j], copy[i]];
-    }
-
-    return copy;
 }
