@@ -55,6 +55,20 @@
       "link": "lab8.html",
       "image": "images/lab8-images/lab8.png",
       "alt": "lab 8 img"
+    },
+    {
+      "title": "Lab 9",
+      "description": "We used php and mySQL to create an interactive movies page",
+      "link": "lab9.html",
+      "image": "images/lab9-images/lab9.png",
+      "alt": "lab 9 img"
+    },
+    {
+      "title": "Lab 10",
+      "description": "We addressed the security vulnerabilities of our deployment.",
+      "link": "lab10.html",
+      "image": "images/lab10-images/lab10.png",
+      "alt": "lab 10 img"
     }
   ],
   
