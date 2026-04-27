@@ -1,0 +1,90 @@
+<?php include 'auth_check.php'; ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lab 9 - PHP & MySQL</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+   <script src="labInfo/lab8/lab8.js" defer></script>
+</head>
+<body>
+   <nav>
+  <div class="nav">
+    <a href="index.html">Home</a>
+
+    <div class="dropdown">
+      <a class="dropbtn active" href="labs.html">Labs</a>
+      <div class="dropdown-content">
+      <a href="lab1.html">Lab 1</a>
+      <a href="lab2.html">Lab 2</a>
+      <a href="lab3.html">Lab 3</a>
+      <a href="lab4.html">Lab 4</a>
+      <a href="lab5.html">Lab 5</a>
+      <a href="lab6.html">Lab 6</a>
+      <a href="lab7.html">Lab 7</a>
+      <a href="lab8.html">Lab 8</a>
+      <a href="lab9.html">Lab 9</a>
+      <a href="lab10.html">Lab 10</a>
+
+      </div>
+    </div>
+
+    <a href="about.html">About Me</a>
+  </div>
+</nav>
+
+  <main class="lab-page">
+    <div class="lab-header">
+      <h1 class="lab-title-banner">Lab 9 - PHP and MySQL</h1>
+    </div>
+
+    <section class="gallery">
+      <article class="img-item">
+        <figure>
+          <img src="images/lab9-images/lab9-SQL.png" alt = "Lab9ss1">
+          <figcaption>Actors.SQL page to import and build database</figcaption>
+        </figure>
+        <div class="img-desc">
+          <p>The sql file used to import and build the actors database. The purpose of this file is to initialize the database with the necessary tables and data.</p>
+        </div>
+      </article>
+
+      <article class="img-item">
+        <figure>
+          <img src="images/lab9-images/lab9-actors.png" alt="Lab9ss2">
+          <figcaption>Physical Actors Database on the PHP page for lab9</figcaption>
+        </figure>
+        <div class="img-desc">
+          <p>This is the physical actors database as it appears on the PHP page for lab9.</p>
+        </div>
+      </article>
+
+      <article class="img-item">
+        <figure>
+          <img src="images/lab9-images/actors-database.png" alt="Lab9ss3">
+          <figcaption>MySQL Actors Database</figcaption>
+        </figure>
+        <div class="img-desc">
+          <p>This is the updated labs page, dynamically generated using JSON data and Ajax.</p>
+        </div>
+      </article>
+    </section>
+<aside class="description-box">
+      <h2>Lab 9 Notes</h2>
+      <p>Summary: In this lab, we were tasked with building a MySQL database and connecting it to a PHP page to display the data. This data specifically was the actors information, the a movies list, and the actors that have played in these movies indexed accordingly.</p>
+      </p>
+      <p>Lessons learned: Building and managing a MySQL database and connecting it to a PHP page. I also learned how to use SQL commands to create tables, insert data, and query the database.</p>
+    <p>Programs used to build this site:
+       <a href="labs/lab9/actors.sql">actors.sql</a>,
+       <a href="labs/lab9/movies.sql">movies.sql</a>
+       <a href="labs/lab9/actors_movies.sql">actors_movies.sql</a>,
+       <a href="labs/lab9/inclassexample/index.php">index.php</a>,
+      </p>
+      
+    </aside>
+        <button id="backToTop">Top</button>
+
+  </main>
+</body>
+</html>
