@@ -1,5 +1,7 @@
-AuthType Basic
-AuthName "Restricted Content"
-AuthUserFile /etc/apache2/.htpasswd
-Requier valid-user
+AddType application/x-httpd-php .html
+
+# AuthType Basic
+# AuthName "Restricted Content"
+# AuthUserFile /etc/apache2/.htpasswd
+# Require valid-user
 

@@ -9,11 +9,13 @@ $(document).ready(function() {
             var output = "";
 
             $.each(data.labs, function(index, project){
+                var lockIcon = project.secure ? ' 🔒' : '';
+                var titleAttr = project.secure ? ' title="Password required"' : '';
 
                 output += '<div class="lab-display">';
                 output += '<img class="lab-img" src="' + project.image + '" alt="' + project.alt + '">';
                 output += '<div class="lab-text">';
-                output += '<a class="lab-title" href="' + project.link + '">' + project.title + '</a>';
+                output += '<a class="lab-title" href="' + project.link + '"' + titleAttr + '>' + project.title + lockIcon + '</a>';
                 output += '<p class="lab-info">' + project.description + '</p>';
                 output += '</div>';
                 output += '</div>';

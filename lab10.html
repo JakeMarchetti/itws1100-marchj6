@@ -1,0 +1,87 @@
+<?php include 'auth_check.php'; ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lab 10- .htaccess & .htpasswd</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+   <script src="labInfo/lab8/lab8.js" defer></script>
+</head>
+<body>
+   <nav>
+  <div class="nav">
+    <a href="index.html">Home</a>
+
+    <div class="dropdown">
+      <a class="dropbtn active" href="labs.html">Labs</a>
+      <div class="dropdown-content">
+      <a href="lab1.html">Lab 1</a>
+      <a href="lab2.html">Lab 2</a>
+      <a href="lab3.html">Lab 3</a>
+      <a href="lab4.html">Lab 4</a>
+      <a href="lab5.html">Lab 5</a>
+      <a href="lab6.html">Lab 6</a>
+      <a href="lab7.html">Lab 7</a>
+      <a href="lab8.html">Lab 8</a>
+      <a href="lab9.html">Lab 9</a>
+      <a href="lab10.html">Lab 10</a>
+
+      </div>
+    </div>
+
+    <a href="about.html">About Me</a>
+  </div>
+</nav>
+
+  <main class="lab-page">
+    <div class="lab-header">
+      <h1 class="lab-title-banner">Lab 10 - .htaccess & .htpasswd</h1>
+    </div>
+
+    <section class="gallery">
+      <article class="img-item">
+        <figure>
+          <img src="images/lab10-images/lab10-p1.png" alt = "Lab10ss1">
+          <figcaption>Deploy project site to production</figcaption>
+        </figure>
+        <div class="img-desc">
+          <p>Make sure that the VM FDQN links specifically to the labsite and cleanup files that may conflict.</p>
+        </div>
+      </article>
+
+      <article class="img-item">
+        <figure>
+          <img src="images/lab10-images/lab10-p2.png" alt="Lab10ss2">
+          <figcaption>Secure site with .htaccess & .htpasswd</figcaption>
+        </figure>
+        <div class="img-desc">
+          <p>Configure .htaccess to restrict access and require authentication for certain files.</p>
+        </div>
+      </article>
+
+      <article class="img-item">
+        <figure>
+          <img src="images/lab10-images/lab10-terminal.png" alt="Lab10ss3">
+          <figcaption>Lab Page Updated</figcaption>
+        </figure>
+        <div class="img-desc">
+        </div>
+        <p>This is the terminal input showing the .htaccess application to certain files to secure them.</p>
+      </article>
+    </section>
+<aside class="description-box">
+      <h2>Lab 10 Notes</h2>
+      <p>Summary: In this lab, we were tasked with creating a .htaccess file to control access to certain files in our lab directory and a .htpasswd file to store user credentials for HTTP authentication. The .htaccess file was configured to restrict access to the lab directory and require authentication for certain files. The .htpasswd file was created using the htpasswd command to generate encrypted passwords for the users. This lab provided hands-on experience with configuring web server access control and understanding the use of .htaccess and .htpasswd files in securing web directories.</p>
+      </p>
+      <p>Lessons learned: Configuring web server access control and understanding the use of .htaccess and .htpasswd files in securing web directories.</p>
+    <p>Programs used to build this site: 
+      <a href="labs/lab10/index.php">index.php</a>
+      </p>
+      
+    </aside>
+        <button id="backToTop">Top</button>
+
+  </main>
+</body>
+</html>
